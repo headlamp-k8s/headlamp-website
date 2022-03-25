@@ -18,12 +18,13 @@
                     >
                     <div class="section-product-image" role="presentation">
                         {{- $image := resources.Get (print "/images/" .icon ) -}}
-                        {{- $image1 := "" -}}
+                        {{- if $image -}}
                         {{- if $image.MediaType.SubType | eq "svg" -}}
                         {{- $svgContents := partial "fillsvg.html" (dict "svg" $image.Content "color" $style.fgcolor) -}}
                         <img src="data:image/svg+xml;base64,{{ $svgContents | base64Encode }}" alt="" />
                         {{- else -}}
                         <img src="{{ $image.RelPermalink }}" alt="" />
+                        {{- end -}}
                         {{- end -}}
                     </div>
                     </div>

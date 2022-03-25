@@ -9,15 +9,15 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="15.875mm"
-   height="15.875mm"
-   viewBox="0 0 15.875 15.875"
+   width="44.450001mm"
+   height="17.4625mm"
+   viewBox="0 0 44.450001 17.4625"
    version="1.1"
-   id="svg836"
+   id="svg831"
    inkscape:version="0.92.4 5da689c313, 2019-01-14"
-   sodipodi:docname="icon-update.svg">
+   sodipodi:docname="shape-blue-2.svg">
   <defs
-     id="defs830" />
+     id="defs825" />
   <sodipodi:namedview
      id="base"
      pagecolor="#ffffff"
@@ -25,9 +25,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="3.959798"
-     inkscape:cx="-53.520123"
-     inkscape:cy="32.541122"
+     inkscape:zoom="0.35"
+     inkscape:cx="-1730.2857"
+     inkscape:cy="58.714268"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -41,14 +41,14 @@
      inkscape:window-y="0"
      inkscape:window-maximized="1" />
   <metadata
-     id="metadata833">
+     id="metadata828">
     <rdf:RDF>
       <cc:Work
          rdf:about="">
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -56,12 +56,12 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(156.86012,-193.05655)">
+     transform="translate(-409.42381,-146.90565)">
     <path
+       class="cls-1"
+       d="m 409.42381,152.67357 22.59542,11.69458 21.85458,-15.68397 -14.00175,-1.77853 z"
+       id="path8"
        inkscape:connector-curvature="0"
-       class="cls-2"
-       d="m -156.86012,193.05655 h 3.35042 v 3.36629 h -3.35042 z m 6.26242,0 h 3.35042 v 3.36629 h -3.35042 z m 6.26216,0 h 3.35042 v 3.36629 h -3.35042 z m 0,12.50844 h 3.35042 v 3.36656 h -3.35042 z m -0.0132,-6.25422 h 3.35042 v 3.36629 h -3.35042 z m -10.29229,3.62611 h 2.11455 l -2.61567,2.62811 h -1.71794 v 3.36656 h 3.35042 v -1.64994 l 2.65351,-2.66621 v 2.1246 h 2.36273 v -6.17722 h -6.14786 v 2.3741 z"
-       id="path10"
-       style="stroke-width:0.26458332;fill:#09bac8;fill-opacity:1" />
+       style="fill:#e0f7f7;fill-rule:evenodd;stroke-width:0.26458332" />
   </g>
 </svg>
