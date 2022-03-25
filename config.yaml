@@ -1,18 +1,18 @@
 baseURL: /
 languageCode: en-us
-title: My Quirky Project
+title: Headlamp
 theme: kinvolk
 assetsDir: assets
 params:
-  description: My new project!
-  #docs:
-    # github_edit_url: https://github.com/flatcar-linux/flatcar-docs/edit/main/docs/
-    # issues_url: https://github.com/kinvolk/flatcar/issues/new?labels=kind/docs
-    # external_docs:
-    # - repo: https://github.com/flatcar-linux/flatcar-docs.git
-    #   name: "latest"
-    #   branch: "main"
-    #   dir: "docs"
+  description: Headlamp is an easy to use and extensible Kubernetes web UI
+  docs:
+    github_edit_url: https://github.com/kinvolk/headlamp/edit/main/docs/
+    issues_url: https://github.com/kinvolk/headlamp/issues/new?labels=kind/docs
+    external_docs:
+    - repo: https://github.com/kinvolk/headlamp.git
+      name: "latest"
+      branch: "main"
+      dir: "docs"
 
 menu:
   main:
