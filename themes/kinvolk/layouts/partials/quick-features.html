@@ -15,7 +15,7 @@
   <div class="container">
     {{ if $title }}<h2 class="title">{{ $title }}</h2>{{ end }}
     {{ if $description }}<div class="description">{{ $description | markdownify }}</div>{{ end }}
-    <div class="row justify-content-between mx-auto">
+    <div class="row justify-content-around justify-content-md-center mx-auto">
       {{ $i := 0 }}
       {{ range $features }}
         <div class="col-12 col-sm-6 col-md-auto feature">

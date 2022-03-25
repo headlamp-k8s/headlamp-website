@@ -4,13 +4,16 @@
   background-position: center top;
   background-size: cover;
   color: $white;
+  // This prevents showing a thin separation line between consecutive sections.
+  margin-bottom: -1px;
 
   @include media-breakpoint-down(md) {
     padding-top: 100px;
-    padding-bottom: 100px;
+    padding-bottom: 40px;
   }
 
   .row {
+    margin-top: 0 !important;
     margin-left: auto;
     margin-right: auto;
 
@@ -98,8 +101,14 @@
     text-align: center;
 
     .card-header {
+      padding-bottom: 0;
+
       img {
         height: 40px;
+
+        @include media-breakpoint-up(md) {
+          height: 48px;
+        }
       }
     }
   }
@@ -852,4 +861,20 @@
   }
 }
 
+// Specific variations
 
+.headlamp {
+  .section-product {
+    &:last-child:after {
+      background-image: url(/images/features-bottom-pattern.svg);
+    }
+  }
+}
+
+.inspektor-gadget {
+  .section-product {
+    &:last-child:after {
+      background-image: url(/images/features-bottom-pattern-2.svg);
+    }
+  }
+}

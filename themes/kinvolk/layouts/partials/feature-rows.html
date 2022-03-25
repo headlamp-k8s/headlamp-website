@@ -17,7 +17,14 @@
                     class="col-12 col-lg-6 p-0"
                     >
                     <div class="section-product-image" role="presentation">
-                        <img src="/images/{{ .icon }}" alt="" />
+                        {{- $image := resources.Get (print "/images/" .icon ) -}}
+                        {{- $image1 := "" -}}
+                        {{- if $image.MediaType.SubType | eq "svg" -}}
+                        {{- $svgContents := partial "fillsvg.html" (dict "svg" $image.Content "color" $style.fgcolor) -}}
+                        <img src="data:image/svg+xml;base64,{{ $svgContents | base64Encode }}" alt="" />
+                        {{- else -}}
+                        <img src="{{ $image.RelPermalink }}" alt="" />
+                        {{- end -}}
                     </div>
                     </div>
                     <div class="col-12 col-lg-6 section-content" {{ if $style.fgcolor }}style="color: {{ $style.fgcolor }}"{{ end }}>
@@ -28,17 +35,19 @@
                 {{ with .highlights }}
                 <div class="row section-feature justify-content-between">
                     <div class="col-12 p-0">
-                    <div class="row align-items-top justify-content-between d-none d-md-flex mt-6">
+                    <div class="row align-items-top justify-content-between justify-content-md-around d-none d-md-flex mt-6">
                         {{ range . }}
                         <div class="col-12 col-md-6 col-lg-4 pr-5">
                             <div class="card">
                             {{ if .icon }}
                             <div class="card-header" role="presentation">
-                                <img src="/images/icon-{{ .icon }}.svg" alt="" />
+                                {{- $svg := resources.Get (print "/images/icon-" .icon ".svg") -}}
+                                {{- $svgContents := partial "fillsvg.html" (dict "svg" $svg.Content "color" $style.fgcolor) -}}
+                                <img src="data:image/svg+xml;base64,{{ $svgContents | base64Encode }}" alt="" />
                             </div>
                             {{ end }}
                             <div class="card-body">
-                                <h5 class="card-title">{{ .title }}</h5>
+                                <h5 class="card-title" style="color: {{ $style.fgcolor }};">{{ .title }}</h5>
                                 {{ if .description }}<p class="card-description">{{ .description | markdownify }}</p>{{ end }}
                             </div>
                             </div>
@@ -58,7 +67,9 @@
                                 <div class="card">
                                 {{ if .icon }}
                                 <div class="card-header">
-                                    <img src="/images/icon-{{ .icon }}.svg" />
+                                    {{- $svg := resources.Get (print "/images/icon-" .icon ".svg") -}}
+                                    {{- $svgContents := partial "fillsvg.html" (dict "svg" $svg.Content "color" $style.fgcolor) -}}
+                                    <img src="data:image/svg+xml;base64,{{ $svgContents | base64Encode }}" alt="" />
                                 </div>
                                 {{ end }}
                                 <div class="card-body">
