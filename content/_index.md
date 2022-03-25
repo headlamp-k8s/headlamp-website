@@ -1,10 +1,11 @@
 ---
-title: 'Inspektor Gadget'
-link: https://kinvolk.github.io/inspektor-gadget/
+title: 'Your Kubernetes web UI'
+link: https://kinvolk.github.io/headlamp/
 logo: '/media/brand-logo.svg'
 logo_bg_img: 'product-bg-1'
+main_class: headlamp
 tagline: ''
-description: Inspektor Gadget is a collection of tools, or gadgets, to debug and inspect Kubernetes applications.
+description: Kubernetes is an easy-to-use and extensible web UI for Kubernetes
 cta: Learn more
 cta_aria_label: Learn more about Inspektor Gadget
 docs:
@@ -18,19 +19,19 @@ style:
   fgcolor: "#ffffff"
   accent:
     bgcolor: "#041552"
-    fgcolor: "#09bac8"
+    fgcolor: "#F4CB00"
 hero:
   merge: true # Will merge these hero definitions into this section pages
   style:
-    class: header-bg-ig
-    bgcolor: '#391628'
-    fgcolor: '#08a2af'
+    class: header-bg-headlamp
+    fgcolor: '#F4CB00'
+    bgcolor: '#002E33'
     descriptioncolor: white
 quick_features:
   title: What is a Container Linux?
   description: The introduction of container-based infrastructure was a paradigm shift. A Container-optimized Linux distribution is the best foundation for cloud native infrastructure.
-  shape_color: '#FEEAEF'
-  icon_color: '#F72E5C'
+  shape_color: '#F5F5F5'
+  icon_color: 'black'
   features:
     - text: A minimal OS image only includes the tools needed to run containers. No package manager, no configuration drift.
       icon: container
@@ -55,49 +56,49 @@ features:
   - title: The Container Infrastructure OS
     icon: container-feature.svg
     style:
-      fgcolor: '#46c1c7'
-      bgcolor: '#12172c'
+      fgcolor: '#01CBBA'
+      bgcolor: '#002E33'
     description: 'Inspektor Gadget is designed from the ground up for running container workloads. It fully embraces the container paradigm, including only what is required to run containers.'
     highlights:
-      - icon: flatcar-app
+      - icon: feature-app
         title: Immutable infrastructure
         description: Your immutable infrastructure deserves an immutable Linux OS. With Inspektor Gadget, you manage your infrastructure, not your configuration.
-      - icon: flatcar-app
+      - icon: feature-app
         title: Designed to scale
         description: Inspektor Gadget includes tools to manage large-scale, global infrastructure. You can manage update polices, versions and group instances with ease.
-      - icon: flatcar-app
+      - icon: feature-app
         title: Reduced complexity
         description: With containers, dependencies are packaged and delivered in container images. This makes package managers unnecessary and simplifies the OS.
   - title: Secure by Design
     icon: secure-feature.svg
     style:
       fgcolor: '#fddc60'
-      bgcolor: '#12172c'
+      bgcolor: '#002E33'
     description: Inspektor Gadget's built-in security features, minimal design and automated updates provide a strong foundation for your infrastructure's security strategy.
     highlights:
-      - icon: flatcar-secure
+      - icon: feature-secure
         title: Security patch automation
         description: Running the latest security patches is crucial to removing potential vulnerabilities. Inspektor Gadget's automated updates does this for you.
-      - icon: flatcar-secure
+      - icon: feature-secure
         title: Immutable filesystem
         description: By making the system partition read-only, Inspektor Gadget eliminates a whole class of high-impact security vulnerabilities.
-      - icon: flatcar-secure
+      - icon: feature-secure
         title: Minimal attack surface
         description: Inspektor Gadget includes only what is required to run containers. By minimizing the size and complexity of the OS, the attack surface is also reduced.
   - title: Automated Updates
     icon: update-feature.svg
     style:
-      fgcolor: '#31bb4d'
-      bgcolor: '#12172c'
+      fgcolor: '#8DCDFE'
+      bgcolor: '#002E33'
     description: With Inspektor Gadget, you'll always be running the most stable, secure and up-to-date Flatcar version by taking advantage of the automated, atomic update feature.
     highlights:
-      - icon: flatcar-update
+      - icon: feature-update
         title: Self-driving updates
         description: Inspektor Gadget uses the same reliable update mechanism as Google's ChromeOS to provide safe, secure and automated system updates.
-      - icon: flatcar-update
+      - icon: feature-update
         title: Always up-to-date
         description: With Inspektor Gadget's automated updates, you'll benefit from always running the most stable, secure and feature-rich version of the OS.
-      - icon: flatcar-update
+      - icon: feature-update
         title: Managed updates
         description: The Kinvolk Update Service allows for defining instance groups, assigning update channels and controlling the frequency, time of day and rate of updates.
 grid_statements:
