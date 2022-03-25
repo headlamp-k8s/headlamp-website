@@ -7,6 +7,7 @@ getdeps:
 .PHONY: docs
 docs:
 	@echo "Fetching external docs…"
+	mkdir -p ./content/docs
 	@find ./content/docs -maxdepth 1 -type l -delete
 	python3 ./tools/docs-fetcher.py ./config.yaml
 
