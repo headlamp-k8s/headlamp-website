@@ -1,0 +1,9 @@
+{
+    "routes": [
+        {
+            "route": "/blogus/*",
+            "redirect": "/blog",
+            "statusCode": 301
+        }
+    ]
+}

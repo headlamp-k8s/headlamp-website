@@ -1,5 +1,6 @@
 all: getdeps docs
 	hugo
+	cp staticwebapp.config.json ./public/
 
 getdeps:
 	pip3 install --upgrade pyyaml
