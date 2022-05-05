@@ -2,7 +2,7 @@
     "routes": [
         {
             "route": "/blogus/*",
-            "redirect": "/blog",
+            "redirect": "/blog/*",
             "statusCode": 301
         }
     ]
