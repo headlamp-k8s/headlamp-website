@@ -1,0 +1,59 @@
+    <ul class="navbar-nav align-items-center">
+      {{ $currentPage := . }}
+      {{ range .Site.Menus.main }}
+          {{ if .HasChildren }}
+              <li class="nav-item dropdown">
+
+                <a href="{{ .URL }}" class="nav-link dropdown-toggle">
+                  {{ .Name }}
+                  <span class="navbar__link-underline"></span>
+                </a>
+
+                {{ $scratch := newScratch }}
+                {{ range .Children }}
+                  {{ $scratch.Add "itemLogo" .Pre }}
+                {{ end }}
+
+                  <div class="dropdown-menu row {{ if (gt (len ($scratch.Get "itemLogo")) 0) }}dropdown-menu_lg{{ end }}">
+                      {{ if .Pre }}
+                        <div class="dropdown-item-pre" style="color: white">
+                          {{ .Pre|markdownify }}
+                        </div>
+                      {{ end }}
+                      <div {{ if (gt (len ($scratch.Get "itemLogo")) 0) }}class="d-md-flex"{{ end }}>
+                        {{ range $index, $elem := .Children }}
+                          {{ $careers := $.GetPage "careers" }}
+                          {{ if ($careers.Params.hiring) | or (not (eq $elem.Identifier "careers")) }}
+                          <a href="{{ $elem.URL }}" class="dropdown-item">
+                            {{ if gt (len .Pre) 0 }}
+                            <div class="dropdown-item__icon">
+                              {{ $elem.Pre }}
+                            </div>
+                            {{ end }}
+                            <div class="dropdown-item__description">
+                              <div class="dropdown-item__title">{{ $elem.Name }}</div>
+                              {{ with  $elem.Title }}
+                              <p class="dropdown-item__text">{{ $elem.Title }}</p>
+                              {{ end }}
+                            </div>
+                          </a>
+                          {{ end }}
+                        {{ end }}
+                      </div>
+                      {{ if .Post }}
+                        <div class="dropdown-item-post " style="color: white">
+                          {{ .Post|markdownify }}
+                        </div>
+                      {{ end }}
+                  </div>
+              </li>
+          {{ else }}
+              <li class="nav-item">
+                  <a href="{{ .URL }}" {{- if .Pre -}}title="{{ .Name }}"{{- end -}} class="nav-link">
+                    {{- if .Pre -}}{{ .Pre }}{{- else -}}{{ .Name }}{{- end -}}
+                    <span class="navbar__link-underline"></span>
+                  </a>
+              </li>
+          {{ end }}
+      {{ end }}
+    </ul>

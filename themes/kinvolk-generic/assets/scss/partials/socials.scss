@@ -1,0 +1,19 @@
+.socials__list {
+  font-size: 0;
+}
+
+.socials__item {
+  font-size: 35px;
+  line-height: 0;
+
+  a {
+    display: block;
+  }
+}
+
+.socials__link {
+  color: $white;
+  &:hover {
+    color: $branding-main;
+  }
+}
