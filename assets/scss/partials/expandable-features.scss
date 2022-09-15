@@ -1,0 +1,56 @@
+$category_color: #01BF83;
+$item_color: #F6C84F;
+$highlight_color: #EC83AB;
+
+.expandable-features-header {
+    color: $category_color;
+}
+
+.group-heading {
+    border-color: $category_color !important;
+    h4 {
+        color: $category_color;
+        &:after {
+            content: '';
+            background: url("up-chevron.svg") 16px center no-repeat;
+        }
+    }
+}
+
+.group-item {
+    .item-header {
+        color: $item_color;
+        font-size: 1.2rem;
+    }
+
+    p {
+        font-size: 1.125rem !important;
+    }
+}
+
+a.more-link {
+    display: block;
+    text-align: center;
+    color: $item_color;
+    &:hover {
+        color: $highlight_color;
+    }
+}
+
+.gadget-count {
+    font-size: 1.2rem;
+}
+
+.group-chevron {
+    color: $highlight_color;
+}
+
+.group-info[aria-expanded="false"] .fa-angle-down {
+    transform: rotate(0deg);
+    transition: 0.5s;
+}
+
+.group-info[aria-expanded="true"] .fa-angle-down {
+    transform: rotate(180deg);
+    transition: 0.5s;
+}
