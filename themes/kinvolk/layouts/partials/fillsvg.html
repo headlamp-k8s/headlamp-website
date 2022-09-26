@@ -1,5 +1,0 @@
-{{- $svg := .svg -}}
-{{- $color := .color -}}
-{{- $svgContents := replaceRE "fill:\\s*#[0-9a-fA-F]+" (printf "fill:%v" $color ) $svg -}}
-{{- $svgContents = replaceRE "fill=\"#[0-9a-fA-F]+\"" (printf "fill=\"%v\"" $color ) $svgContents -}}
-{{- return $svgContents -}}
