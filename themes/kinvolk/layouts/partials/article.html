@@ -1,0 +1,61 @@
+<article class="article header-bg-stripes">
+  <div class="container">
+    <div class="article-main mx-auto">
+      <div class="row align-items-center justify-content-center page-header">
+        <div class="col-12 p-0 align-items-center text-center">
+          <h2 id="blogtitle" class="section-title">{{ .Title }}</h2>
+          {{ partial "authors.html" (dict "message" "By" "context" . "with_date" true ) }}
+        </div>
+      </div>
+
+      {{- $path := print "**/" .Params.postImage -}}
+      {{- $image := resources.GetMatch $path -}}
+      {{- $imagePath := path.Join "/media/" .Params.postImage -}}
+      {{- $scaleImage := true -}}
+      {{- if eq (index .Params "scaleImage") false -}}
+        {{- $scaleImage = false -}}
+      {{- end -}}
+      {{- if ($image) | and $scaleImage -}}
+      {{- if in (slice "image/jpeg" "image/jpg" "image/png") (string $image.MediaType) -}}
+          {{- $imagePath = ($image.Resize "900x webp q100").RelPermalink -}}
+      {{- end -}}
+      {{- end -}}
+
+      <div class="row article__hero-image" role="presentation">
+        <img src="{{ $imagePath }}" alt="article image" {{ if .Params.postImageTooltip }}title="{{ .Params.postImageTooltip }}"{{ end }}>
+      </div>
+
+      <div class="row flex-wrap-reverse article__wrap">
+        <div class="col-12">
+          <div class="article-content mx-auto" aria-describedby="blogtitle">
+          {{- if not .Params.original_link -}}
+            {{ .Content }}
+          </div>
+          {{- else -}}
+            <p class="alert alert-secondary font-italic mb-4"> This article was originally posted at <a href="{{ .Params.original_link }}">the Kinvolk blog</a></p> 
+            {{ .Summary }}
+            <p class="read-more mt-4">
+              <a href="{{ .Params.original_link }}" aria-label="Read more of {{ .Title }}">Continue reading the original article
+                <svg class="btn-arrow__icon" viewBox="0 0 12 15">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/images/arrow.svg#arrow"></use>
+                </svg>
+              </a>
+            </p>
+          </div>
+          {{- end -}}
+          <div class="article__author p-0 my-7 mx-auto text-center">
+            {{ partial "authors.html" (dict "message" "WRITTEN BY" "context" . "with_date" true ) }}
+            <p class="aside__title">Tags:
+              {{ range .Params.tags }}
+                <a href="{{ $.Site.LanguagePrefix | absURL }}tags/{{- . | urlize -}}/">#{{- . -}}</a>
+              {{ end }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {{ partial "related-posts" . }}
+
+</article>

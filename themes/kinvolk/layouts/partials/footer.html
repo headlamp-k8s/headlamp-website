@@ -1,0 +1,120 @@
+<footer class="footer">
+  <div class="container">
+      <div class="container footer__navigation mb-3">
+        <div class="row justify-content-between d-flex flex-wrap w-100 px-3">
+          {{/*
+            *****************************************************
+            The navlist's items can use the following attributes:
+              section: if a "section" attribute is used, e.g.
+              section: products, then it will try to take the title, permalink,
+              and pages from that section. Each page of the section will
+              represent a link in that footer menu.
+              If the page has no content associated with them, then it will
+              link to an anchor in the main section's page (see the services'
+              section).
+              To control how a page is shown in the footer's menu, each page
+              can declare a "footer_menu" attribute in their front-matter.
+              It's interpreted as follows:
+                footer_menu:
+                  hide: true // the page will not show up in the footer-menu
+                  title: "My Page" // used as the menu link's text instead of
+                                   // the page's own title.
+
+              title: if set, it will be used as the text for the link or header
+              of that footer menu. If it's used in combination with "section",
+              the title attribute still takes precedence.
+
+              link: if set, then the menu footer header will be a link pointing
+              to the given URL. This takes precedence over the section's
+              permalink if a section attribute is used.
+
+              quicklinks: if set, it will add its items as links in the footer
+              menu items. If used in combination with section, the quicklinks
+              will be displayed after listing the section's pages.
+
+            The quicklinks' items can use the following attributes:
+              page: if set, it indicates the page from which to extract the
+              title and the link (permalink in this case).
+
+              If "title" or "link" are used, they will work analogously to
+              what was explained above, taking precedence over what comes from
+              the page.
+            *****************************************************
+          */}}
+          {{ range .Site.Params.footer.navlist }}
+            <div class="col-12 col-sm-6 col-md-3 mb-3 md-md-2">
+              {{ $section := (dict) }}
+              {{ if .section }}
+                {{ $section = $.Site.GetPage "section" .section }}
+              {{ end }}
+              {{ $title := or .title $section.Params.title }}
+              <div class="footer-column__title">
+                {{ $link := or .link $section.Permalink}}
+                {{ if $link }}
+                  <a href="{{ $link }}">{{ $title }}</a>
+                {{ else }}
+                  {{ $title }}
+                {{ end }}
+              </div>
+              <ul class="no-gutters footer-menu__list list-unstyled">
+                {{ range $section.Pages }}
+                  {{ $footer_settings := default (dict) .Params.footer_menu }}
+                  {{ if not $footer_settings.hide }}
+                    <li class="footer-menu__item">
+                      {{ $url := "" }}
+                      {{ if .Content }}
+                        {{ $url = .Permalink }}
+                      {{ else }}
+                        {{ $url = print (ref . $section.Section) "#" (anchorize .Params.title) }}
+                      {{ end }}
+                      <a href="{{ $url }}" class="footer-menu__link">{{ or (index $footer_settings "title") .Params.Title }}</a>
+                    </li>
+                  {{ end }}
+                {{ end }}
+                {{ range .quicklinks }}
+                  {{ $hide := false }}
+                  {{ $page := dict }}
+                  {{ if .page }}
+                    {{ $page = $.Site.GetPage "page" .page }}
+                    {{ if $page | and $page.Params.footer_menu }}
+                      {{ $hide = $page.Params.footer_menu.hide }}
+                    {{ end }}
+                  {{ end }}
+                  {{ if not $hide }}
+                    {{ $link := or .link $page.Permalink }}
+                    {{ $title := or .title $page.Title }}
+                    <li class="footer-menu__item">
+                      <a href="{{ $link }}" class="footer-menu__link">{{ $title }}</a>
+                    </li>
+                  {{ end }}
+                {{ end }}
+              </ul>
+            </div>
+          {{ end }}
+        </div>
+    </div>
+    <div class="footer__copy row container p-0">
+      <div class="col-12 col-md-6 p-0">
+        <div class="row align-items-center footer__brand">
+          <div class="logo footer__logo col-auto col-md-1">
+            <a href="{{ .Site.BaseURL }}">
+              {{ partial "logo.html" . }}
+            </a>
+          </div>
+          <div class="footer__socials col-ml-auto col-md-8">
+            {{ partial "socials.html" . }}
+          </div>
+        </div>
+      </div>
+      <div class="footer__copyright col-12 col-md-6 p-0 pt-4">
+        <p>Copyright {{ dateFormat "2006" now }} {{ .Site.Copyright }}</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  <script src="/js/jquery-3.4.1.min.js"></script>
+  <script src="/js/bootstrap.min.js"></script>
+  {{- $common := resources.Get "js/common.js" -}}
+  {{- $js := slice $common | resources.Concat "js/common.js" -}}
+  <script src="{{ $js.Permalink }}"></script>
