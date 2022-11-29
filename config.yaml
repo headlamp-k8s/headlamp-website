@@ -1,7 +1,7 @@
 baseURL: /
 languageCode: en-us
 title: Headlamp
-theme: kinvolk
+theme: kinvolk-generic
 assetsDir: assets
 params:
   description: Headlamp is an easy to use and extensible Kubernetes web UI
