@@ -1,0 +1,11 @@
+<ul class="list-inline socials__list">
+  {{ $project := .Site.Params.title }}
+  {{ range .Site.Params.social }}
+  <li class="list-inline-item socials__item ">
+    <a href="{{ .url }}" class="socials__link" target="_blank" rel="noopener"
+    aria-label="{{ $project }} {{ .title }}">
+      <i class="fab fa-{{ .title | lower }}-square"></i>
+    </a>
+  </li>
+  {{ end }}
+</ul>
