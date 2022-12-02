@@ -5,6 +5,13 @@ theme: kinvolk-generic
 assetsDir: assets
 params:
   description: Headlamp is an easy to use and extensible Kubernetes web UI
+  social:
+    - title: twitter
+      url: 'https://twitter.com/headlamp_ui'
+      image: 'twitter-icon'
+    - title: github
+      url: 'https://github.com/kinvolk/headlamp'
+      image: 'github-icon'
   docs:
     github_edit_url: https://github.com/kinvolk/headlamp/edit/main/docs/
     issues_url: https://github.com/kinvolk/headlamp/issues/new?labels=kind/docs
