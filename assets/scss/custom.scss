@@ -1,0 +1,17 @@
+$branding-main: #F4CB00;
+
+.section-product {
+  &:last-child:after {
+    content: "";
+    display: block;
+    height: 350px;
+    margin-top: 5rem;
+    background: url(/images/features-bottom-pattern-2.png) center calc(100% + 1px) repeat-x;
+  }
+}
+
+.grid-statements {
+  background: #FFFCCC;
+}
+
+@import './main'
