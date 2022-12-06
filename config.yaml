@@ -27,7 +27,16 @@ menu:
       url: /blog
       identifier: blog
       weight: -500
+    - name: Install
+      url: /docs/latest/installation/
+      identifier: install
+      weight: -100
+    - name: Github
+      url: https://github.com/kinvolk/inspektor-gadget
+      identifier: github
+      weight: -50
+      pre: github
     - name: Docs
       url: /docs
       identifier: docs
-      weight: -200
+      weight: -30
