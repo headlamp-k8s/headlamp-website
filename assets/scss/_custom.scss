@@ -46,10 +46,10 @@ $gray:    #c4c4c4;
 $gold:   #BE8900;
 
 
-$branding-main-darker: #F72E5C;
-$branding-dark: #34002C;
-$branding-main-bg: $branding-dark;
-$branding-main: #EC83AB;
+$branding-main-darker: #F72E5C !default;
+$branding-dark: #34002C !default;
+$branding-main-bg: $branding-dark !default;
+$branding-main: #EC83AB !default;
 
 $primary: $black;
 $success: $branding-main;

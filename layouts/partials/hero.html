@@ -27,7 +27,7 @@
               <h1 {{ if $styles.titlecolor }}style="color: {{ $styles.titlecolor }}"{{ end }}>{{ $title }}</h1>
               <h2 {{ if $styles.descriptioncolor }}style="color: {{ $styles.descriptioncolor }}"{{ end }}>{{ $description | markdownify }}</h2>
               {{ if $hero.button }}
-                  <a class="hero-button btn {{ default "btn-blue" $hero.button.class }}" href="{{ $hero.button.link }}">{{ $hero.button.text }}</a>
+                  <a class="hero-button btn {{ default "btn-blue" $hero.button.class }}" href="{{ $hero.button.link }}">{{ $hero.button.text | safeHTML }}</a>
               {{ end }}
           </div>
       </div>

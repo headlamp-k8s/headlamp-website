@@ -3,9 +3,6 @@
 {{ $description := .Params.quick_features.description }}
 {{ $shapes := slice "blue" "yellow" "red" "green" }}
 {{ $useSeparator := default true .Params.quick_features.top_separator }}
-{{ if $features }}
-{{- $shapeBgColor := (default "#e0f7f7" .Params.quick_features.shape_color) -}}
-{{- $iconColor := (default "#09BAC8" .Params.quick_features.icon_color) -}}
 
 {{ if $useSeparator }}
 {{/* This is a trick to make the separator only visible when we want */}}
@@ -15,7 +12,10 @@
   <div class="container">
     {{ if $title }}<h2 class="title">{{ $title }}</h2>{{ end }}
     {{ if $description }}<div class="description">{{ $description | markdownify }}</div>{{ end }}
-    <div class="row justify-content-between mx-auto">
+    <div class="features row justify-content-between mx-auto">
+      {{ if $features }}
+      {{- $shapeBgColor := (default "#e0f7f7" .Params.quick_features.shape_color) -}}
+      {{- $iconColor := (default "#09BAC8" .Params.quick_features.icon_color) -}}
       {{ $i := 0 }}
       {{ range $features }}
         <div class="col-12 col-sm-6 col-md-auto feature">
@@ -47,7 +47,7 @@
         </div>
         {{ $i = mod (add $i 1) (len $shapes) }}
       {{ end }}
+      {{ end }}
     </div>
   </div>
 </section>
-{{ end }}
