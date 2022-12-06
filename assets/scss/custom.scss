@@ -1,4 +1,5 @@
 $branding-main-darker: #002E33;
+$branding-dark: #002E33;
 $branding-main: #3d7aa9;
 
 @import './main';
@@ -13,6 +14,12 @@ $branding-main: #3d7aa9;
   }
 }
 
+$light-yellow: #FFFCCC;
+
 .grid-statements {
-  background: #FFFCCC;
+  background: $light-yellow;
+}
+
+.article__related {
+  background-color: $light-yellow;
 }
