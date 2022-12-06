@@ -16,15 +16,20 @@
                 {{ range first 1 (where .Data.Pages "Type" "blog").ByDate.Reverse }}
                   <div class="col-12 col-lg-6 order-first order-lg-last p-0">
                     {{- $path := print "**/" .Params.postImage -}}
-                    {{- $image := resources.GetMatch $path -}}
+                    {{- $image := .Resources.GetMatch .Params.postImage -}}
+                    {{- if not $image -}}
+                      {{- $image = resources.GetMatch $path -}}
+                    {{- end -}}
                     {{- $imagePath := path.Join "/media/" .Params.postImage -}}
                     {{- if eq (index .Params "scaleImage") false -}}
                       {{- $scaleImage = false -}}
                     {{- end -}}
                     {{- if ($image) | and $scaleImage -}}
-                    {{- if in (slice "image/jpeg" "image/jpg" "image/png") (string $image.MediaType) -}}
-                        {{- $imagePath = ($image.Resize "920x webp q100").RelPermalink -}}
-                    {{- end -}}
+                      {{- $mediaType := (default $image.ResourceType $image.MediaType) -}}
+                      {{- $imagePath = $image.RelPermalink -}}
+                      {{- if in (slice "image/jpeg" "image/jpg" "image/png") (string $image.MediaType) -}}
+                          {{- $imagePath = ($image.Resize "920x webp q100").RelPermalink -}}
+                      {{- end -}}
                     {{- end -}}
                     <div class="w-100 h-100 post-hero__image" style="background-image: url('{{ $imagePath }}');">
                     </div>
