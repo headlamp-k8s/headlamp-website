@@ -31,7 +31,8 @@
       <nav class="w-100 p-0 navbar navbar-expand-md justify-content-md-between {{ default "" .Params.navbar_class }}">
 
         <a href="{{ .Site.BaseURL }}" class="navbar-brand">
-            {{ partial "logo.html" . }}
+          {{- $logo := (default "/media/brand-logo.svg" .Site.Params.logo) -}}
+          <img src="{{ $logo }}" alt="{{ .Site.Title }}" >
         </a>
 
         <button aria-label="Toggle navigation bar" class="navbar-toggler p-0 mobile-menu" type="button" data-toggle="collapse" data-target="#navbarToggler">

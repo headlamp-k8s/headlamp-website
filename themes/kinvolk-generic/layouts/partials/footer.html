@@ -98,7 +98,8 @@
         <div class="row align-items-center footer__brand">
           <div class="logo footer__logo col-auto col-md-1">
             <a href="{{ .Site.BaseURL }}">
-              {{ partial "logo.html" . }}
+              {{- $logo := default "/media/brand-logo.svg" (default "/media/footer-logo.svg" .Site.Params.footerLogo) -}}
+              <img src="{{ $logo }}" alt="{{ .Site.Title }}" >
             </a>
           </div>
           <div class="footer__socials col-ml-auto col-md-8">
