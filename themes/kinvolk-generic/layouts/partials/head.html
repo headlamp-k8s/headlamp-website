@@ -40,7 +40,7 @@
                 {{- $baseURL = substr $baseURL 0 -1  -}}
             {{- end -}}
             {{- if eq $baseURL "" -}}
-                {{- $baseURL = "https://www.inspektor-gadget.io"  -}}
+                {{- $baseURL = (default "https://www.inspektor-gadget.io" .Site.Params.productionURL)  -}}
             {{- end -}}
 
             {{- $postImage = printf "%s%s" $baseURL $imagePath -}}
@@ -49,7 +49,7 @@
         {{- end -}}
     {{- end -}}
 
-    {{- $ogImage := default "https://www.inspektor-gadget.io/images/social-card.png" $postImage -}}
+    {{- $ogImage := default (print (default $.Site.BaseURL .Site.Params.productionURL) "/images/social-card.png") $postImage -}}
 
     {{- $title := .Title -}}
 
