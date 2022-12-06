@@ -11,7 +11,7 @@
 {{ $styles := $hero.style }}
 {{ $title := index $hero "title" }}
 {{ if eq $title nil }}
-  {{ $title = default .Title $hero.title }}
+  {{ $title = markdownify (default .Title $hero.title) }}
 {{ end }}
 {{ $description := default .Description $hero.description }}
 <section
