@@ -1,10 +1,20 @@
 baseURL: /
 languageCode: en-us
 title: Headlamp
-theme: kinvolk
+theme: kinvolk-generic
 assetsDir: assets
+copyright: Microsoft Inc. All Rights Reserved.
 params:
   description: Headlamp is an easy to use and extensible Kubernetes web UI
+  favicon: "favicon.png"
+  productionURL: https://headlamp.dev
+  social:
+    - title: twitter
+      url: 'https://twitter.com/headlamp_ui'
+      image: 'twitter-icon'
+    - title: github
+      url: 'https://github.com/kinvolk/headlamp'
+      image: 'github-icon'
   docs:
     github_edit_url: https://github.com/kinvolk/headlamp/edit/main/docs/
     issues_url: https://github.com/kinvolk/headlamp/issues/new?labels=kind/docs
@@ -20,7 +30,16 @@ menu:
       url: /blog
       identifier: blog
       weight: -500
+    - name: Install
+      url: /docs/latest/installation/
+      identifier: install
+      weight: -100
+    - name: Github
+      url: https://github.com/kinvolk/inspektor-gadget
+      identifier: github
+      weight: -50
+      pre: github
     - name: Docs
       url: /docs
       identifier: docs
-      weight: -200
+      weight: -30

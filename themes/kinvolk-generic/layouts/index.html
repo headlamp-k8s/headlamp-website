@@ -1,0 +1,38 @@
+{{ define "unique-content" }}
+    {{- if .Params.companies_section -}}
+    <section class="mt-5">
+        {{ partial "companies" . }}
+    </section>
+    {{- end -}}
+
+    {{ partial "quick-features.html" . }}
+
+    {{ if .Content }}
+    <section>
+        {{ partial "main-article" . }}
+    </section>
+    {{ end }}
+
+    {{ partial "feature-rows.html" . }}
+
+    {{ partial "grid-statements" . }}
+
+    {{ if .Params.subproducts }}
+        {{ range .Params.subproducts }}
+        <section class="subproduct" style="background: {{ .bgcolor }};">
+            <div class="container" id="{{ .title | urlize }}">
+                    <h2 style="color: {{ default "white" .titlecolor }};" class="subproduct-title">{{ .title }}</h2>
+                    <p class="subproduct-description">{{ .description | markdownify }}</p>
+                    <div class="subproduct-screenshot">
+                        <a href="{{ .link }}"><img src="/images/{{ .screenshot }}" alt="Screenshot"/></a>
+                    </div>
+                    <p class="subproduct-bottom-text">{{ if .bottom_text }}{{ .bottom_text | markdownify }}{{ end }}</p>
+            </div>
+        </section>
+        {{ end }}
+    {{ end }}
+{{ end }}
+
+{{ define "bottom" }}
+    {{ partial "product/product-bottom" . }}
+{{ end }}
