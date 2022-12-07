@@ -7,13 +7,13 @@ main_class: headlamp
 tagline: ''
 description: Headlamp is a user-friendly Kubernetes UI focused on extensibility
 cta: Learn more
-cta_aria_label: Learn more about Inspektor Gadget
+cta_aria_label: Learn more about Headlamp
 docs:
-  link: https://flatcar-linux.org/docs/latest/
+  link: https://headlamp.dev/docs/latest
   action_text: Get Started
 support:
-  link: https://flatcar-linux.org
-  action_text: Visit Website
+  link: https://github.com/inspektor-gadget/inspektor-gadget/issues
+  action_text: File an issue
 style:
   bgcolor: "#072365"
   fgcolor: "#ffffff"
@@ -67,38 +67,6 @@ highlights:
     title: Automated Updates
     description: Keep your cluster secure by always running an OS with the latest security updates and features
 features:
-  # - title: The Container Infrastructure OS
-  #   icon: container-feature.svg
-  #   style:
-  #     fgcolor: '#01CBBA'
-  #     bgcolor: '#002E33'
-  #   description: 'Inspektor Gadget is designed from the ground up for running container workloads. It fully embraces the container paradigm, including only what is required to run containers.'
-  #   highlights:
-  #     - icon: feature-app
-  #       title: Immutable infrastructure
-  #       description: Your immutable infrastructure deserves an immutable Linux OS. With Inspektor Gadget, you manage your infrastructure, not your configuration.
-  #     - icon: feature-app
-  #       title: Designed to scale
-  #       description: Inspektor Gadget includes tools to manage large-scale, global infrastructure. You can manage update polices, versions and group instances with ease.
-  #     - icon: feature-app
-  #       title: Reduced complexity
-  #       description: With containers, dependencies are packaged and delivered in container images. This makes package managers unnecessary and simplifies the OS.
-  # - title: Secure by Design
-  #   icon: secure-feature.svg
-  #   style:
-  #     fgcolor: '#fddc60'
-  #     bgcolor: '#002E33'
-  #   description: Inspektor Gadget's built-in security features, minimal design and automated updates provide a strong foundation for your infrastructure's security strategy.
-  #   highlights:
-  #     - icon: feature-secure
-  #       title: Security patch automation
-  #       description: Running the latest security patches is crucial to removing potential vulnerabilities. Inspektor Gadget's automated updates does this for you.
-  #     - icon: feature-secure
-  #       title: Immutable filesystem
-  #       description: By making the system partition read-only, Inspektor Gadget eliminates a whole class of high-impact security vulnerabilities.
-  #     - icon: feature-secure
-  #       title: Minimal attack surface
-  #       description: Inspektor Gadget includes only what is required to run containers. By minimizing the size and complexity of the OS, the attack surface is also reduced.
   - title: A UI that adapts to your use-cases
     icon: round-dots.svg
     style:
@@ -124,26 +92,6 @@ grid_statements:
   statements:
     - |
       ![GIF showing a quick tour of Headlamp's capabilities](https://raw.githubusercontent.com/kinvolk/headlamp/screenshots/videos/headlamp_quick_run.gif)
-  resources_section:
-    title: Do more with Flatcar
-    description: Discover your infrastructure's potential
-    style: light
-    resources:
-      - title: Case Studies
-        icon: page-text
-        link: /blog/2019/07/how-pubnative-is-saving-30-on-infrastructure-costs-with-kinvolk-packet-and-kubernetes/
-      - title: Documentation
-        icon: page-chart
-        link: https://flatcar-linux.org/docs/latest/
-      - title: Security
-        icon: lock-black
-        link: /flatcar-container-linux/security
-      - title: FAQ
-        icon: chat
-        link: /flatcar-container-linux/faq
-      - title: Release Notes
-        icon: page-write
-        link: /flatcar-container-linux/releases
   contact:
     message: '# Get in touch!'
     simple: true
