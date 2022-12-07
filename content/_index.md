@@ -35,7 +35,7 @@ hero:
 quick_features:
   title: What is Headlamp?
   description: |
-    Out of the box, Headlamp is a fully functional Kubernetes UI. By leveraging its powerful plugin system, builders can shape Headlamp to fit their bespoke use-cases, products and environments.
+    Out of the box, Headlamp is a fully functional Kubernetes UI. By leveraging its powerful plugin system, builders can shape Headlamp to fit their bespoke use-cases, products, and environments.
 
   # shape_color: '#F5F5F5'
   # icon_color: 'black'
