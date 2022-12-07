@@ -1,11 +1,11 @@
 ---
-title: 'Your Kubernetes web UI'
+title: '*Your* Kubernetes Experience'
 link: https://kinvolk.github.io/headlamp/
 logo: '/media/brand-logo.svg'
 logo_bg_img: 'product-bg-1'
 main_class: headlamp
 tagline: ''
-description: Headlamp is an easy-to-use and extensible UI for Kubernetes
+description: Headlamp is a user-friendly Kubernetes UI focused on extensibility
 cta: Learn more
 cta_aria_label: Learn more about Inspektor Gadget
 docs:
@@ -35,9 +35,8 @@ hero:
 quick_features:
   title: What is Headlamp?
   description: |
-    Headlamp was created to be a Kubernetes web UI that has the traditional functionality of
-    other web UIs/dashboards available (i.e. to list and view resources) and can be extensible
-    through plugins.
+    Out of the box, Headlamp is a fully functional Kubernetes UI. By leveraging its powerful plugin system, builders can shape Headlamp to fit their bespoke use-cases, products and environments.
+
   # shape_color: '#F5F5F5'
   # icon_color: 'black'
   # features:
@@ -106,26 +105,20 @@ features:
       fgcolor: '#01CBBA'
       bgcolor: '#002E33'
     description: |
-      Headlamp was designed to adapt not only a user's cluster configuration (multiple or
-      single cluster, permissions-based UI, etc.), but also to be adapted through plugins.
+      Headlamp adapts not only to a user's cluster configuration (multiple or single cluster, permissions-based UI, etc.), but its powerful plugin system allows builders to customize the experience with new functionality that fits their products.
     highlights:
       - icon: headlamp-wrench
-        title: Adapt the UI and branding
+        title: Adaptable UI & Branding
         description: |
-          Headlamp's plugin system makes it possible to create custom experiences to vendors
-          and users with a minimal effort. It is possible to not only add/extend views but also
-          the branding.
+          Headlamp's plugin system makes it possible to create custom experiences with minimal effort; add/extend views, customize branding, etc.
       - icon: headlamp-secure
-        title: RBAC-based controls
+        title: RBAC-based Controls
         description: |
-          Not all users have the same permissions in the the cluster, so Headlamp checks
-          RBAC and displays actions like *delete* or *edit* only if the user has the permissions
-          to do so.
+          Headlamp adapts to a user's cluster permissions. It checks RBAC and displays actions like *delete* or *edit* only if the user has the permissions to do so.
       - icon: headlamp-app
-        title: Desktop or Web
+        title: Desktop and/or Web
         description: |
-          Some users prefer to run a desktop app, while some vendors may want to make a Headlamp-based UI available for all their users online. Both cases are possible with
-          Headlamp.
+          Keeping with Headlamp's goal of supporting a fully customizable exprience, it can be run as a web app, desktop app, or both.
 grid_statements:
   title: See it in action
   statements:
