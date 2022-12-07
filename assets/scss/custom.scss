@@ -1,6 +1,6 @@
 $branding-main-darker: #002E33;
 $branding-dark: #002E33;
-$branding-main: #3d7aa9;
+$branding-main: #002E33;
 
 @import './main';
 
@@ -22,4 +22,19 @@ $light-yellow: #FFFCCC;
 
 .article__related {
   background-color: $light-yellow;
+}
+
+.article-main {
+  a {
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  .article-content {
+    color: #424242;
+    background-color: white;
+  }
 }
