@@ -67,7 +67,7 @@
     <meta property="og:title" content="{{ $ogTitle }}" />
     <meta property="og:description" content="{{ $ogDescription }}" />
     <meta property="og:url" content="{{ .Permalink }}" />
-    <meta property="og:site_name" content="Inspektor Gadget" />
+    <meta property="og:site_name" content="{{ $ogTitle }}" />
     <meta property="article:modified_time" content="{{ hugo.BuildDate }}" />
     <meta property="og:image" content="{{ $ogImage }}" />
     {{- if gt $ogImageWidth 0 -}}
@@ -78,8 +78,8 @@
     <!-- Twitter meta tags -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:image" content="{{ $ogImage }}" />
-    <meta name="twitter:creator" content="@nspektor-gadget" />
-    <meta name="twitter:site" content="@nspektor-gadget" />
+    <meta name="twitter:creator" content="{{ default "@nspektor_gadget" $.Site.Params.twitter }}" />
+    <meta name="twitter:site" content="{{ default "@nspektor_gadget" $.Site.Params.twitter }}" />
 
     <link rel="stylesheet" href="/css/font-awesome.min.css">
 
