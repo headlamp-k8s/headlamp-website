@@ -22,7 +22,7 @@
       <div class="row justify-content-between">
           <div class="col-12">
               {{ if $hero.icon }}
-                <img class="hero-icon" src="/images/{{ $hero.icon }}" alt="Flatcar Logo">
+                <img class="hero-icon" src="/images/{{ $hero.icon }}" alt="Logo">
               {{ end }}
               <h1 {{ if $styles.titlecolor }}style="color: {{ $styles.titlecolor }}"{{ end }}>{{ $title }}</h1>
               <h2 {{ if $styles.descriptioncolor }}style="color: {{ $styles.descriptioncolor }}"{{ end }}>{{ $description | markdownify }}</h2>
