@@ -52,8 +52,6 @@
 
     {{- $ogImage := default (print (default $.Site.BaseURL .Site.Params.productionURL) "/images/social-card.png") $postImage -}}
 
-    {{- $title := .Title -}}
-
     {{- with .OutputFormats.Get "rss" -}}
         {{- printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $title | safeHTML -}}
     {{- end -}}
