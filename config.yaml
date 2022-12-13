@@ -35,12 +35,12 @@ menu:
       url: /docs/latest/installation/
       identifier: install
       weight: -100
-    - name: Github
-      url: https://github.com/kinvolk/inspektor-gadget
-      identifier: github
-      weight: -50
-      pre: github
     - name: Docs
       url: /docs
       identifier: docs
-      weight: -30
+      weight: -60
+    - name: Github
+      url: https://github.com/kinvolk/headlamp
+      identifier: github
+      weight: -50
+      pre: github
