@@ -50,7 +50,7 @@
           {{ else }}
               <li class="nav-item">
                   <a href="{{ .URL }}" {{- if .Pre -}}title="{{ .Name }}"{{- end -}} class="nav-link">
-                    {{ .Name }}
+                    {{ .Name | safeHTML }}
                     {{- with .Pre -}}<span class="fab fa-{{ . }} ml-1"></span>{{- end -}}
                     <span class="navbar__link-underline"></span>
                   </a>
