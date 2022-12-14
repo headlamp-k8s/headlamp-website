@@ -50,10 +50,10 @@ menu:
       url: /blog
       identifier: blog
       weight: -500
-    - name: Install
-      url: /docs/latest/installation/
+    - name: Slack
+      url: https://kubernetes.slack.com/messages/headlamp
       identifier: install
-      weight: -100
+      weight: -55
     - name: Docs
       url: /docs
       identifier: docs
