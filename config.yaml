@@ -24,6 +24,25 @@ params:
       name: "latest"
       branch: "main"
       dir: "docs"
+  footer:
+    navlist:
+      - title: Community
+        quicklinks:
+          - title: Slack
+            link: https://kubernetes.slack.com/messages/headlamp
+          - title: Contribute
+            link: https://headlamp.dev/docs/latest/contributing/
+          - title: Github
+            link: https://github.com/kinvolk/headlamp
+      - title: Documentation
+        link: /docs
+        quicklinks:
+          - title: In-cluster Deployment
+            link: https://headlamp.dev/docs/latest/installation/in-cluster/
+          - title: Desktop app installation
+            link: https://headlamp.dev/docs/latest/installation/desktop/
+          - title: Plugin development
+            link: https://headlamp.dev/docs/latest/development/plugins/
 
 menu:
   main:
