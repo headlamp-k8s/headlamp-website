@@ -1,6 +1,7 @@
 $branding-main-darker: #002E33;
 $branding-dark: #002E33;
 $branding-main: #002E33;
+$footer-links-hover: #F4CB00;
 
 @import './main';
 
@@ -36,5 +37,11 @@ $light-yellow: #FFFCCC;
   .article-content {
     color: #424242;
     background-color: white;
+  }
+}
+
+.footer {
+  a:hover {
+    color: $footer-links-hover;
   }
 }
