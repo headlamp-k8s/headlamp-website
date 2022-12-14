@@ -60,8 +60,7 @@ menu:
       url: /docs
       identifier: docs
       weight: -60
-    - name: Github
+    - name: Github <span class="fab fa-github"></span>
       url: https://github.com/kinvolk/headlamp
       identifier: github
       weight: -50
-      pre: github
