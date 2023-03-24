@@ -5,6 +5,12 @@ $footer-links-hover: #F4CB00;
 
 @import './main';
 
+.home {
+  .banner {
+    padding-bottom: 50px;
+  }
+}
+
 .section-product {
   &:last-child:after {
     content: "";
