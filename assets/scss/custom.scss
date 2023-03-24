@@ -11,6 +11,20 @@ $footer-links-hover: #F4CB00;
   }
 }
 
+.docs {
+  .docs-section {
+    .td-content {
+      a {
+        text-decoration: underline;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
 .section-product {
   &:last-child:after {
     content: "";
