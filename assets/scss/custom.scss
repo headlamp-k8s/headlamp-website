@@ -45,3 +45,36 @@ $light-yellow: #FFFCCC;
     color: $footer-links-hover;
   }
 }
+
+.quick-features {
+  a {
+    text-decoration: underline;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  .description {
+    margin-bottom: 0;
+  }
+}
+
+.download_button {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  width: 120px;
+  margin-top: 10px;
+  min-width: 205px;
+  width: 205px;
+
+  .download-button-text {
+    padding-left: 10px;
+    font-weight: normal;
+    max-width: 100px;
+  }
+}
+
+.download-button-icon {
+  font-size: 30px;
+}

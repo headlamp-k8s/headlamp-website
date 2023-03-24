@@ -1,0 +1,6 @@
+{{- $platform := index . "platform" -}}
+{{- $name := index . "name" -}}
+{{- $url := index . "url" -}}
+<a class="m-2 btn btn-black download-button" style="text-decoration: none; display: inline-flex; align-items: center;" href="/docs/latest/installation/desktop/{{ default $platform $url }}-installation">
+	<span class="download-button-icon"><i class="fab fa-{{ if (eq $platform "mac") }}apple{{else}}{{ $platform}}{{ end }}"></i></span><span style="padding-left: 10px; font-weight: normal; max-width: 100px;">Install on <b>{{ $name }}</b></span>
+</a>
