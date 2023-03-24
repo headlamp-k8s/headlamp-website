@@ -29,7 +29,7 @@ hero:
     titlecolor: '#F4CB00'
     descriptioncolor: white
   button:
-    text: <i class="fab fa-github"></i>&nbsp;&nbsp;&nbsp;Get latest version
+    text: <i class="fab fa-github"></i>&nbsp;&nbsp;&nbsp;See latest release
     link: https://github.com/kinvolk/headlamp/releases/latest
     class: btn-black
 quick_features:
