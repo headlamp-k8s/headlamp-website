@@ -51,7 +51,7 @@ menu:
     - name: Blog
       url: /blog
       identifier: blog
-      weight: -500
+      weight: -499
     - name: Slack <span class="fas fa-external-link-alt"></span>
       url: https://kubernetes.slack.com/messages/headlamp
       identifier: install
