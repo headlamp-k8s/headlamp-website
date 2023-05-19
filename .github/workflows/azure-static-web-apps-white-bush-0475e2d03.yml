@@ -8,6 +8,10 @@ on:
     types: [opened, synchronize, reopened, closed]
     branches:
       - main
+  schedule:
+    # Run at 00:01 daily so it picks up any docs changes and updates the news stripe
+    - cron: '01 0 * * *'
+
   workflow_dispatch:
     # For manual dispatch
 
