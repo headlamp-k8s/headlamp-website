@@ -15,6 +15,10 @@
     {{ partial "download_button.html" ( dict "platform" "linux" "name" "Linux" ) }}
     {{ partial "download_button.html" ( dict "platform" "mac" "name" "Mac OS" ) }}
     {{ partial "download_button.html" ( dict "platform" "windows" "name" "Windows" "url" "win" ) }}
+    <div class="cncf mt-5">
+      <p>We are a <a href="https://cncf.io" target="_blank">Cloud Native Computing Foundation</a> Sandbox Project.</p>
+      <img alt="" src="/images/cncf_light.svg" />
+    </div>
     <div class="features row justify-content-between mx-auto">
       {{ if $features }}
       {{- $shapeBgColor := (default "#e0f7f7" .Params.quick_features.shape_color) -}}
