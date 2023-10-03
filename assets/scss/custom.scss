@@ -64,6 +64,20 @@ $light-yellow: #FFFCCC;
   a:hover {
     color: $footer-links-hover;
   }
+
+  &__copyright {
+    > p {
+      a {
+        color: $white;
+        text-decoration: underline;
+
+        &:hover {
+          color: $footer-links-hover;
+          text-decoration: none;
+        }
+      }
+    }
+  }
 }
 
 .quick-features {
