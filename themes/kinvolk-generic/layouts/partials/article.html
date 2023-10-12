@@ -21,7 +21,7 @@
         {{- $mediaType := (default $image.ResourceType $image.MediaType) -}}
         {{- $imagePath = $image.RelPermalink -}}
         {{- if in (slice "image/jpeg" "image/jpg" "image/png") (string $image.MediaType) -}}
-            {{- $imagePath = ($image.Resize "900x webp q100").RelPermalink -}}
+            {{- $imagePath = ($image.Resize "1024x webp").RelPermalink -}}
         {{- end -}}
       {{- end -}}
 
