@@ -28,7 +28,7 @@
                       {{- $mediaType := (default $image.ResourceType $image.MediaType) -}}
                       {{- $imagePath = $image.RelPermalink -}}
                       {{- if in (slice "image/jpeg" "image/jpg" "image/png") (string $image.MediaType) -}}
-                          {{- $imagePath = ($image.Resize "920x webp q100").RelPermalink -}}
+                          {{- $imagePath = ($image.Resize "1024x webp q100").RelPermalink -}}
                       {{- end -}}
                     {{- end -}}
                     <div class="w-100 h-100 post-hero__image" style="background-image: url('{{ $imagePath }}');">
