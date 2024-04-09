@@ -27,19 +27,19 @@ To deploy Headlamp on a VM (in this example, in Azure), we have created a script
 * Use this command to run the script:
 
 ```bash
-curl -sSfL https://headlamp.dev/blog/2024/03/user-added-cluster-support-in-shared-headlamp-deployments/create-azurevm.sh   | bash
+curl -sSfL https://headlamp.dev/blog/2024/04/user-added-cluster-support-in-shared-headlamp-deployments/create-azurevm.sh   | bash
 ```
 
 * To run headlamp using docker-compose, install the required packages by running this command inside the VM.
 
 ```bash
-curl -sSfL https://headlamp.dev/blog/2024/03/user-added-cluster-support-in-shared-headlamp-deployments/install-docker-amd64.sh | bash
+curl -sSfL https://headlamp.dev/blog/2024/04/user-added-cluster-support-in-shared-headlamp-deployments/install-docker-amd64.sh | bash
 ```
 
 * Execute the following command inside the VM to start Headlamp with the dynamic-clusters plugin (which sets up the UI for loading a kubeconfig) using docker-compose
 
 ```bash
-curl -sSfL https://headlamp.dev/blog/2024/03/user-added-cluster-support-in-shared-headlamp-deployments/docker-compose-headlamp-run.sh | bash
+curl -sSfL https://headlamp.dev/blog/2024/04/user-added-cluster-support-in-shared-headlamp-deployments/docker-compose-headlamp-run.sh | bash
 ```
 
 * In the Azure portal, make an NSG (network security groups) rule that permits incoming connection only to port 4466.
@@ -49,7 +49,7 @@ curl -sSfL https://headlamp.dev/blog/2024/03/user-added-cluster-support-in-share
 * Now we need a kubeconfig with at least one cluster. So, if you do not have one, you can run the following script to make an AKS (Azure Kubernetes Service) cluster and get the kubeconfig value in base64 format from the output.
 
 ```bash
-curl -sSfL https://headlamp.dev/blog/2024/03/user-added-cluster-support-in-shared-headlamp-deployments/aks-kubeconfig.sh | bash
+curl -sSfL https://headlamp.dev/blog/2024/04/user-added-cluster-support-in-shared-headlamp-deployments/aks-kubeconfig.sh | bash
 ```
 
 ## Creating stateless clusters
