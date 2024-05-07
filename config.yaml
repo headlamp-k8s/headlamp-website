@@ -45,6 +45,8 @@ params:
             link: https://headlamp.dev/docs/latest/installation/desktop/
           - title: Plugin development
             link: https://headlamp.dev/docs/latest/development/plugins/
+          - title: F.A.Q.
+            link: https://headlamp.dev/docs/latest/faq/
   news_stripe:
     text: 'Headlamp present with a kiosk at KubeCon NA 2023 [Read more »](/blog/2023/11/headlamp-in-kubecon-north-america-2023/)'
     expiration: "2023-11-10T00:00:00+02:00"

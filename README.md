@@ -71,6 +71,9 @@ an import module, e.g.:
 
 and then start the local server again with `make run`.
 
+You can then view the changes in the `new_latest` version of the docs by accessing the site at the server.
+ex. `http://localhost:1313/docs/new_latest`.
+
 ## Changing the published documentation
 
 The documentation is set under `params.docs` in [config.yaml](./config.yaml) and
