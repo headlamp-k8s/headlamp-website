@@ -1,6 +1,6 @@
 +++
 authors = ["santhosh-nagaraj"]
-date = "2024-05-23T10:00:00+00:00"
+date = "2024-05-28T10:00:00+00:00"
 description = "Introducing Plugin Settings: Empowering Customization"
 draft = false
 tags = ["kubernetes", "ui", "headlamp", "plugins"]
