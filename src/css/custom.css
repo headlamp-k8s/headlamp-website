@@ -1,0 +1,73 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+@import url("https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@300..700&family=Overpass:ital,wght@0,100..900;1,100..900&display=swap");
+
+pre {
+  font-weight: 400;
+  font-variant-ligatures: none;
+}
+
+a:not(.card):not(.menu__link):not(.navbar__item):not(.button):not(
+    .table-of-contents__link
+  ) {
+  text-decoration: underline;
+}
+
+a.table-of-contents__link--active {
+  text-decoration: underline;
+}
+
+.menu__link {
+  text-transform: capitalize;
+}
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #111111;
+  --ifm-color-primary-dark: #0f0f0f;
+  --ifm-color-primary-darker: #0e0e0e;
+  --ifm-color-primary-darkest: #0c0c0c;
+  --ifm-color-primary-light: #131313;
+  --ifm-color-primary-lighter: #141414;
+  --ifm-color-primary-lightest: #161616;
+
+  --ifm-font-family-monospace: "Overpass Mono", monospace;
+  --ifm-font-family-base: "Overpass", sans-serif;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+
+  --ifm-heading-color: #292827;
+
+  --button-primary-color: #fff200;
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+html[data-theme="dark"] {
+  --ifm-font-family-monospace: "Overpass Mono", monospace;
+  --ifm-font-family-base: "Overpass", sans-serif;
+  --ifm-color-primary: #f8f8f8;
+  --ifm-color-primary-dark: #dfdfdf;
+  --ifm-color-primary-darker: #d3d3d3;
+  --ifm-color-primary-darkest: #aeaeae;
+  --ifm-color-primary-light: #ffffff;
+  --ifm-color-primary-lighter: #ffffff;
+  --ifm-color-primary-lightest: #ffffff;
+  --ifm-heading-color: #fff;
+}
+
+.button--primary {
+  background-color: var(--button-primary-color);
+  border: none;
+  color: #111;
+}
+.button--primary:hover {
+  color: #111;
+}
+
+.hero {
+  background: transparent;
+}

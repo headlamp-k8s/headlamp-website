@@ -1,0 +1,71 @@
+/**
+ * CSS files with the .module.css suffix will be treated as CSS modules
+ * and scoped locally.
+ */
+
+.heroBanner {
+  padding: 4rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 996px) {
+  .heroBanner {
+    padding: 2rem;
+  }
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about {
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 40px 0;
+}
+
+.aboutTitle {
+  font-size: 2.5rem;
+}
+
+.aboutDescription {
+  max-width: 700px;
+  font-size: 1.25rem;
+}
+
+.clusterLink {
+  padding: 1rem 0;
+}
+
+.downloadButtons {
+  padding: 1rem 0;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.cncfInfo {
+  padding-top: 3rem;
+}
+.layoutWrapper {
+  background: radial-gradient(circle at 10% 10%, #fff2001c, transparent 20%),
+    radial-gradient(circle at 90% 400px, #fff2001c, transparent 30%);
+}
+
+.landingImage {
+  display: block;
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+  border-radius: var(--ifm-card-border-radius);
+  border: 3px solid #ffd500;
+}

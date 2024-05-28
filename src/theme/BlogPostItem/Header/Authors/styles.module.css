@@ -1,0 +1,10 @@
+.authorCol {
+  max-width: inherit !important;
+  flex-grow: 1 !important;
+}
+
+.imageOnlyAuthorRow {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 0.5rem;
+}
