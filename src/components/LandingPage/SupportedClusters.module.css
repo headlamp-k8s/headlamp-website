@@ -1,0 +1,20 @@
+.container {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 4rem 1rem;
+}
+
+.logos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 4rem;
+  justify-content: center;
+}
+
+.description {
+  max-width: 550px;
+  text-align: center;
+}

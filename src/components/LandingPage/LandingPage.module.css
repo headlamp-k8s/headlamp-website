@@ -1,0 +1,76 @@
+/**
+ * CSS files with the .module.css suffix will be treated as CSS modules
+ * and scoped locally.
+ */
+
+.title {
+  font-size: 3rem;
+}
+
+@media (max-width: 576px) {
+  .title {
+    font-size: 2.5rem;
+  }
+}
+
+.heroBanner {
+  display: flex;
+  color: var(--ifm-hero-text-color);
+  padding: 4rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 996px) {
+  .heroBanner {
+    /* padding: 2rem 0; */
+  }
+}
+
+.buttons {
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+}
+
+.aboutContainer {
+  background: var(--ifm-color-emphasis-100);
+}
+
+.about {
+  width: 100%;
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 40px 1rem;
+}
+
+.aboutTitle {
+  font-size: 2.5rem;
+}
+
+.clusterLink {
+  padding: 1rem 0;
+}
+
+.layoutWrapper {
+  background: radial-gradient(circle at 10% 10%, #fff2001c, transparent 20%),
+    radial-gradient(circle at 90% 400px, #fff2001c, transparent 30%),
+    url("/img/big-circles.svg") 0% 100% no-repeat;
+}
+
+.videoContainer {
+  display: flex;
+  justify-content: center;
+  margin: 0 1rem;
+}
+
+.video {
+  max-width: 900px;
+  width: 100%;
+  border-radius: var(--ifm-card-border-radius);
+  border: 3px solid #ffd500;
+}

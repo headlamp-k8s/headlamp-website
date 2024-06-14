@@ -1,0 +1,39 @@
+.container {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  max-width: 800px;
+  padding: 5rem 1rem;
+  margin: 0 auto;
+}
+
+.container :global .tabs__item {
+  white-space: nowrap;
+}
+
+.title {
+  font-size: 2rem;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 2rem 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.flexContent {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.inClusterTitle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 5rem;
+}
