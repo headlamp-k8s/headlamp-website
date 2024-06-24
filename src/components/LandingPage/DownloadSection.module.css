@@ -1,0 +1,71 @@
+.section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+@media (max-width: 630px) {
+  .container {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+.downloadButton {
+  font-weight: normal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0.62rem 1.5rem;
+  font-size: 1rem;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.codeBlock {
+  margin: 0 !important;
+}
+
+.buttonMenu {
+  max-height: inherit;
+  box-sizing: border-box;
+  overflow: auto;
+  padding: 2px;
+  min-width: 150px;
+  box-sizing: border-box;
+  outline: none;
+  background: var(--ifm-color-emphasis-100);
+  border-radius: 6px;
+  border: 1px solid var(--ifm-color-emphasis-300);
+}
+
+a.buttonMenuItem {
+  text-decoration: none !important;
+  margin: 2px;
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  outline: none;
+  cursor: pointer;
+  color: var(--text-color);
+  font-size: 0.85rem;
+  position: relative;
+  display: grid;
+  grid-template-areas:
+    "label kbd"
+    "desc  kbd";
+  align-items: center;
+  column-gap: 20px;
+  forced-color-adjust: none;
+}
+
+a.buttonMenuItem[data-focused] {
+  background: var(--ifm-color-emphasis-200);
+}
