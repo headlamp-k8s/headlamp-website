@@ -29,7 +29,7 @@ const downloadInfo: Record<Platform, DownloadInfo> = {
     label: "Download for Windows",
     fallbackDownloadLink:
       "/docs/latest/installation/desktop/windows-installation",
-    script: "choco install headlamp",
+    script: "winget install headlamp",
   },
   mac: {
     label: "Download for macOS",
