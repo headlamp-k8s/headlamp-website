@@ -99,13 +99,13 @@ const config: Config = {
           label: "Home",
           activeBaseRegex: `^\/$`,
         },
+        { to: "/blog", label: "Blog", position: "left" },
         {
           type: "docSidebar",
           sidebarId: "mainSidebar",
           position: "left",
           label: "Docs",
         },
-        { to: "/blog", label: "Blog", position: "left" },
         {
           href: "https://kubernetes.slack.com/messages/headlamp",
           label: "Slack",
