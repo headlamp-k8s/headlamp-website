@@ -62,9 +62,8 @@ export default function BlogPostItem({
               src={useBaseUrl(post.assets.image)}
               style={{
                 display: "block",
-                height: "100%",
+                height: "400px",
                 objectFit: "cover",
-                maxHeight: "400px",
                 width: "100%",
                 borderRadius: "10px",
               }}

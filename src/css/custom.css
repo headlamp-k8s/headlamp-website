@@ -90,6 +90,10 @@ html[data-theme="dark"] {
   }
 }
 
+.pagination-nav {
+  margin-bottom: 3rem;
+}
+
 .button--primary {
   background-color: var(--brand-core-yellow);
   border: none;
