@@ -14,7 +14,7 @@ export function LatestBlogPostItem({ children }) {
       <img
         src={useBaseUrl(post.assets.image)}
         className={styles.image}
-        alt="Article image"
+        alt=""
       />
       <div className={styles.metaContainer}>
         <h2 className={styles.title}>{post.metadata.title}</h2>
