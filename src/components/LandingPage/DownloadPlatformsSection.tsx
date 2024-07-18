@@ -136,6 +136,18 @@ helm install my-headlamp headlamp/headlamp --namespace kube-system`}
               Get the Docker Desktop Extension <IconExternalLink />
             </Link>
           </TabItem>
+          <TabItem value="glasskube" label="Glasskube">
+            <p>
+              Install Headlamp in your cluster using{" "}
+              <Link href="https://glasskube.dev/">Glasskube</Link>. Run the following:
+            </p>
+            <CodeBlock language="bash" className="fit-content">
+              {`glasskube install headlamp`}
+            </CodeBlock>
+            <Link to="/docs/latest/installation/in-cluster/#using-glasskube">
+              Learn more
+            </Link>
+          </TabItem>
         </Tabs>
       </div>
     </>

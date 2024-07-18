@@ -29,6 +29,16 @@ helm install my-headlamp headlamp/headlamp --namespace kube-system -f values.yam
 helm install my-headlamp headlamp/headlamp --namespace kube-system --set replicaCount=2
 ```
 
+## Using Glasskube
+To install Headlamp using [Glasskube](https://glasskube.dev/), you can select "Headlamp" from the "ClusterPackages" tab in the Glasskube GUI then click "install" or you can run the following command:
+```
+glasskube install headlamp
+```
+Once Headlamp is installed you can access the Headlamp dashboard by clicking "open" in the Glasskube GUI or by using the open command:
+```
+glasskube open headlamp
+```
+
 ## Using simple yaml
 
 We also maintain a simple/vanilla [file](https://github.com/headlamp-k8s/headlamp/blob/main/kubernetes-headlamp.yaml)
