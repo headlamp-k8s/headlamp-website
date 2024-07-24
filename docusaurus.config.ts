@@ -37,7 +37,8 @@ const config: Config = {
       {
         docs: {
           sidebarPath: "./sidebars.ts",
-          editUrl: "https://github.com/headlamp-k8s/headlamp-website",
+          editUrl:
+            "https://github.com/headlamp-k8s/headlamp-website/edit/main/",
         },
         blog: {
           showReadingTime: true,
