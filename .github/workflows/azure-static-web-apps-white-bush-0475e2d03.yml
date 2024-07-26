@@ -20,6 +20,16 @@ jobs:
     runs-on: ubuntu-latest
     name: Build and Deploy Job
     steps:
+      - name: Checkout
+        uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4.1.7
+        with:
+          repository: headlamp-k8s/headlamp
+          path: headlamp
+          fetch-depth: 0
+
+      - name: Set HEADLAMP_DOCS environment variable
+        run: echo "HEADLAMP_DOCS=$(pwd)/headlamp/docs" >> $GITHUB_ENV
+
       - uses: actions/checkout@v2
         with:
           submodules: true
