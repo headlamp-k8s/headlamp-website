@@ -5,9 +5,11 @@ TARGET=${HEADLAMP_DOCS:-${1:-../headlamp/docs}}
 TARGET_PATH=$(realpath "$TARGET")
 LINK_PATH="./docs/latest"
 
+mkdir -p $(dirname $LINK_PATH)
+
 # Remove the existing link if it exists
 if [ -L $LINK_PATH ]; then
-  echo "Not creating docs link, ./docs/latest already exists"
+  echo "Not creating docs link, already exists: ./docs/latest -> $(readlink -f $LINK_PATH)"
   exit 0
 fi
 

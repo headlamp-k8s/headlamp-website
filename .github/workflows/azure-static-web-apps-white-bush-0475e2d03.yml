@@ -27,12 +27,20 @@ jobs:
           path: headlamp
           fetch-depth: 0
 
-      - name: Set HEADLAMP_DOCS environment variable
-        run: echo "HEADLAMP_DOCS=$(pwd)/headlamp/docs" >> $GITHUB_ENV
-
       - uses: actions/checkout@v2
         with:
+          path: headlamp-website
           submodules: true
+
+      - name: Make typedoc for Headlamp
+        run: |
+          cd headlamp
+          make frontend-install
+          make docs
+
+      - name: Set HEADLAMP_DOCS environment variable
+        run: |
+          echo "HEADLAMP_DOCS=$(pwd)/headlamp/docs" >> $GITHUB_ENV
 
       - name: Build And Deploy
         id: builddeploy
@@ -43,9 +51,11 @@ jobs:
           action: "upload"
           ###### Repository/Build Configurations - These values can be configured to match your app requirements. ######
           # For more information regarding Static Web App workflow configurations, please visit: https://aka.ms/swaworkflowconfig
-          app_location: "/" # App source code path
+          app_location: "headlamp-website/" # App source code path
           output_location: "build" # Built app content directory - optional
           ###### End of Repository/Build Configurations ######
+        env:
+          HEADLAMP_DOCS: ${{ env.HEADLAMP_DOCS }}
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
