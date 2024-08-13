@@ -1,4 +1,5 @@
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
+import Head from '@docusaurus/Head';
 import Heading from "@theme/Heading";
 import Layout from "@theme/Layout";
 import clsx from "clsx";
@@ -31,6 +32,9 @@ export default function LandingPage(): JSX.Element {
 
   return (
     <Layout wrapperClassName={styles.layoutWrapper}>
+      <Head>
+        <meta name="description" content="Headlamp is a user-friendly Kubernetes UI focused on extensibility" />
+      </Head>
       <main>
         <HomepageHeader />
         <section className={styles.videoContainer}>
