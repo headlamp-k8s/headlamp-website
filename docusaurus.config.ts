@@ -162,6 +162,10 @@ const config: Config = {
               label: "Twitter",
               href: "https://twitter.com/headlamp_ui",
             },
+            {
+              label: "Mastodon",
+              href: "https://fosstodon.org/@headlamp",
+            },
           ],
         },
         {
