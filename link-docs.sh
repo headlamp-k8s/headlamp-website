@@ -1,9 +1,26 @@
 #!/usr/bin/env sh
 set -e
 
-TARGET=${HEADLAMP_DOCS:-${1:-../headlamp/docs}}
+TARGET=${HEADLAMP_DOCS:-${1}}
+
+# Clone the repository if the TARGET doesn't exist
+if [ ! -e "$TARGET" ]; then
+  if [ ! -e "./headlamp" ]; then
+    echo "Cloning headlamp/docs repository..."
+    git clone --depth 1 https://github.com/headlamp-k8s/headlamp.git ./headlamp
+  elif [ -d "./headlamp/.git" ]; then
+    echo "Updating headlamp/docs repository..."
+    git -C ./headlamp pull
+  fi
+  make docs -C ./headlamp
+
+  TARGET=$(realpath ./headlamp/docs)
+fi
+
 TARGET_PATH=$(realpath "$TARGET")
 LINK_PATH="./docs/latest"
+
+echo "Using Headlamp docs target: $TARGET_PATH"
 
 mkdir -p $(dirname $LINK_PATH)
 
