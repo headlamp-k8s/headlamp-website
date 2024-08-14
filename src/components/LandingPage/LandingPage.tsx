@@ -35,7 +35,7 @@ export default function LandingPage(): JSX.Element {
         <HomepageHeader />
         <section className={styles.videoContainer}>
           <video
-            src="/hl-preview.mp4"
+            src="/hl-preview.webm"
             autoPlay
             loop
             muted
