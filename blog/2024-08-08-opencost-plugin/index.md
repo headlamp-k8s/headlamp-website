@@ -49,7 +49,7 @@ opencost:
 Replace `<Prometheus-Namespace>` and `<Prometheus-Service>` with the namespace in which you have installed prometheus and prometheus service name.
 :::
 
-## Installing KubeCost plugin from the plugin Catalog
+## Installing OpenCost plugin from the plugin Catalog
 
 1. In Headlamp’s home screen click on Plugin Catalog > Catalog.
 2. Click the OpenCost plugin from the list of plugins that are displayed.
