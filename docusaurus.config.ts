@@ -7,7 +7,6 @@ const config: Config = {
   title: "Headlamp",
   tagline: "Headlamp is a user-friendly Kubernetes UI focused on extensibility",
   favicon: "img/favicon.png",
-
   // Set the production url of your site here
   url: "https://headlamp.dev/",
   // Set the /<baseUrl>/ pathname under which your site is served
