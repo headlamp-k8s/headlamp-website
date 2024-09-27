@@ -14,12 +14,16 @@
   gap: 2rem;
 }
 
-.image {
-  width: 50%;
+a.heroImage {
+  flex-shrink: 0;
   object-fit: cover;
+  width: 50%;
+}
+.image {
   border-radius: var(--ifm-card-border-radius);
   border: 1px solid #ffd500;
-  flex-shrink: 0;
+  object-fit: cover;
+  height: 100%;
 }
 
 .title {
@@ -35,7 +39,7 @@
   .container {
     flex-direction: column;
   }
-  .image {
+  a.heroImage, a.heroImage img {
     height: 250px;
     width: 100%;
   }

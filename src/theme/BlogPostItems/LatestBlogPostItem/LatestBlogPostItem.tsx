@@ -11,11 +11,13 @@ export function LatestBlogPostItem({ children }) {
 
   return (
     <div className={styles.container}>
-      <img
-        src={useBaseUrl(post.assets.image)}
-        className={styles.image}
-        alt=""
-      />
+      <Link to={post.metadata.permalink} className={styles.heroImage}>
+        <img
+          src={useBaseUrl(post.assets.image)}
+          className={styles.image}
+          alt={post.metadata.title}
+        />
+      </Link>
       <div className={styles.metaContainer}>
         <h2 className={styles.title}>{post.metadata.title}</h2>
 
