@@ -105,7 +105,7 @@ export function DownloadPlatformsContent() {
 helm install my-headlamp headlamp/headlamp --namespace kube-system`}
             </CodeBlock>
             <Link to="/docs/latest/installation/in-cluster/#using-helm">
-              Learn more
+              Learn more about installing Headlamp with Helm
             </Link>
           </TabItem>
           <TabItem value="yaml" label="YAML Configuration">
@@ -118,7 +118,7 @@ helm install my-headlamp headlamp/headlamp --namespace kube-system`}
               https://raw.githubusercontent.com/headlamp-k8s/headlamp/main/kubernetes-headlamp.yaml
             </CodeBlock>
             <Link to="/docs/latest/installation/in-cluster/#using-simple-yaml">
-              Learn more
+              Learn more about installing Headlamp with kubectl apply
             </Link>
           </TabItem>
           <TabItem value="in-cluster" label="Minikube">
@@ -127,7 +127,7 @@ helm install my-headlamp headlamp/headlamp --namespace kube-system`}
               {`minikube addons enable headlamp\nminikube service headlamp -n headlamp`}
             </CodeBlock>
             <Link href="https://minikube.sigs.k8s.io/docs/handbook/addons/headlamp/">
-              Learn more
+              Learn more about installing Headlamp as a Minikube addon
             </Link>
           </TabItem>
           <TabItem value="docker-desktop" label="Docker Desktop">
@@ -145,7 +145,7 @@ helm install my-headlamp headlamp/headlamp --namespace kube-system`}
               {`glasskube install headlamp`}
             </CodeBlock>
             <Link to="/docs/latest/installation/in-cluster/#using-glasskube">
-              Learn more
+              Learn more about installing Headlamp with Glasskube
             </Link>
           </TabItem>
         </Tabs>
