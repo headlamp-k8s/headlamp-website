@@ -3,6 +3,8 @@ import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
 import { githubA11yLight } from "./src/prismColorTheme";
 
+const dateForRedirects = new Date(2024, 7, 1);
+
 const config: Config = {
   title: "Headlamp",
   tagline: "Headlamp is a user-friendly Kubernetes UI focused on extensibility",
@@ -30,6 +32,29 @@ const config: Config = {
         }
       };
     },
+    [
+      '@docusaurus/plugin-client-redirects',
+      {
+        createRedirects(existingPath) {
+          // Check if the path matches /blog/YYYY/MM/DD/...
+          const blogPostRegex = /^\/blog\/(\d{4})\/(\d{2})\/(\d{2})\/(.+)/;
+          const match = existingPath.match(blogPostRegex);
+          if (match) {
+            const [_, year, month, _day, path] = match;
+
+            // Only redirect for posts before July 2024, when we launched the new website,
+            // with the new blog post URL structure.
+            const postDate = new Date(year, month);
+            if (postDate < dateForRedirects) {
+              // Redirect to /blog/YYYY/MM/...
+              return [`/blog/${year}/${month}/${path}`];
+            }
+          }
+
+          return undefined;
+        },
+      },
+    ],
   ],
 
   // Even if you don't use internationalization, you can use this field to set
