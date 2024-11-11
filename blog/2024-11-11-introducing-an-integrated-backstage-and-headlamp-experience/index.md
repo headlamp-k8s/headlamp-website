@@ -16,13 +16,13 @@ Similar to Headlamp, Backstage has a plugin system to extend its functionality. 
 
 ### Enhancing Backstage for Kubernetes Management
 
-At the last Kubecon in Paris we spoke with the Backstage team about how Headlamp and Backstage could work together. We quickly came to the conclusion that the projects complement each other and we should work on integrating them. Thus, we have created two plugins. One is a plugin for Backstage to embed Headlamp into the Backstage UI. The other is a plugin for Headlamp that links back to Backstage resources when Headlamp is running in a Backstage context. This allows for seamlessly moving between Headlamp and Backstage.
+At the last Kubecon in Paris we spoke with the Backstage team about how Headlamp and Backstage could work together. We quickly came to the conclusion that the projects complement each other and we should work on integrating them. Thus, we have implemented this involving two parts: the Backstage part, that sets up Headlamp automatically (with the Kubernetes clusters that Backstage is configured to use) and embeds Headlamp into the Backstage UI; and the Headlamp part, which places links back to Backstage resources when Headlamp is running in this context. This allows for seamlessly moving between Headlamp and Backstage.
 
 By integrating Headlamp with Backstage and vice versa, teams can leverage the strengths of both tools.
 
 ## Accessing Headlamp from Backstage
 
-The Headlamp plugin for Backstage offers an embedded instance of Headlamp, enabling users to explore various Kubernetes components, including deployments, services, and configurations. It allows you to quickly execute common operations, such as viewing logs or checking the health of your resources. You can add a Headlamp entry to Backstage's sidebar as a convenient way to access it (see [these instructions](https://github.com/headlamp-k8s/backstage-plugin/tree/headlamp_plugin/headlamp#4-add-headlamp-to-the-sidebar)).
+The Headlamp integration in Backstage offers an embedded instance of Headlamp, enabling users to explore various Kubernetes components, including deployments, services, and configurations. It allows you to quickly execute common operations, such as viewing logs or checking the health of your resources. You can add a Headlamp entry to Backstage's sidebar as a convenient way to access it (see [these instructions](https://github.com/headlamp-k8s/backstage-plugin/tree/main/headlamp#3-add-headlamp-to-the-sidebar)).
 
 **Headlamp view in Backstage:**
 
@@ -34,27 +34,13 @@ Besides this access to the embedded view, users will now have direct links to th
 
 ![Screenshot showing a link from a resource in Backstage to Headlamp](./link-to-open-resource-in-headlamp.png)
 
-### How to Install the Headlamp Plugin for Backstage
+### How to Install the Headlamp in Backstage
 
-The Headlamp Plugin for Backstage is divided in a frontend plugin and a backend plugin. You can find the instructions for installing the backend plugin [here](https://github.com/headlamp-k8s/backstage-plugin/tree/headlamp_plugin/headlamp#configuration), and the frontend plugin [here](https://github.com/headlamp-k8s/backstage-plugin/tree/headlamp_plugin/headlamp#headlamp-plugin).
+The Headlamp integration in Backstage is divided in a frontend plugin and a backend plugin. You can find the instructions for installing the backend plugin [here](https://github.com/headlamp-k8s/backstage-plugin/tree/main/headlamp-backend#readme), and the frontend plugin [here](https://github.com/headlamp-k8s/backstage-plugin/tree/main/headlamp#readme).
 
 ## Accessing Backstage from Headlamp
 
 When in the embedded Headlamp instance, users will also find integrated links from various Headlamp views that allow them to jump to Backstages' own view for the related Kubernetes services. Thus, completing the circle and allowing cross-linking between both UIs.
-
-**The screenshot below shows the button to access a Backstage view from Headlamp:**
-
-![Screenshot showing a button to access a Backstage view from Headlamp](./backstage-button-in-headlamp.png)
-
-But this is not limited to an embedded instance of Headlamp. This Backstage plugin for Headlamp has been developed so it can be deployed in any Headlamp flavor, allowing the user to configure the URL to their Backstage deployment making it useful even if we run Headlamp and Backstage separately.
-
-**The screenshot below shows the settings of the Backstage plugin for Headlamp:**
-
-![Screenshot showing settings of the Backstage plugin for Headlamp](./backstage-plugin-settings.jpeg)
-
-### How to Install the Backstage plugin for Headlamp
-
-The Backstage Plugin for Headlamp is already part of the Headlamp instance that is embedded in the plugin for Backstage. To install the plugin in a standalone Headlamp instance, either use the Plugin Catalog in the Headlamp desktop app, or follow a method similar to the one described in this [blog post](/blog/2022/10/20/best-practices-for-deploying-headlamp-with-plugins) if deploying Headlamp in the web or in-cluster.
 
 ## Demo
 
