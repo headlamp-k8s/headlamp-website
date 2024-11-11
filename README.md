@@ -58,7 +58,7 @@ $ ./link-docs.sh
 
 ### Latest Docs Built
 
-Latest docs build: [36337f8](https://github.com/headlamp-k8s/headlamp/commit/36337f8630d171d9c477b453668e4a2f95634a2e)
+Latest docs build: [60f43fc](https://github.com/headlamp-k8s/headlamp/commit/60f43fcff390ed94ea8908eecf40679f905446a5)
 
 The line below is updated automatically by a Github Action to point to the latest version of the documentation and trigger a new build of the website.
 
