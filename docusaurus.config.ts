@@ -36,6 +36,11 @@ const config: Config = {
       '@docusaurus/plugin-client-redirects',
       {
         createRedirects(existingPath) {
+          // Redirect /docs/ to /docs/latest/
+          if (existingPath === "/docs/latest/") {
+            return ["/docs/"];
+          }
+
           // Check if the path matches /blog/YYYY/MM/DD/...
           const blogPostRegex = /^\/blog\/(\d{4})\/(\d{2})\/(\d{2})\/(.+)/;
           const match = existingPath.match(blogPostRegex);
