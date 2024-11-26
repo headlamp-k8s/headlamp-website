@@ -123,3 +123,13 @@ html[data-theme="dark"] {
 .search-icon {
   display: none;
 }
+
+figure > p {
+  margin: 0;
+}
+
+figcaption {
+  text-align: center;
+  font-style: italic;
+  opacity: 0.8;
+}
