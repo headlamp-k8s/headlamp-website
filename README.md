@@ -56,6 +56,37 @@ When run without arguments, the script will attempt to clone the Headlamp reposi
 $ ./link-docs.sh
 ```
 
+### Documentation linting
+
+You can use [Vale](https://vale.sh/) linter to check for common mistakes, spelling errors and validate with [Microsoft Writing Style Guide](https://learn.microsoft.com/en-us/style-guide/welcome/).
+
+To get started you need to [install vale](https://vale.sh/docs/vale-cli/installation/).
+
+Then run this command to check a single document
+
+```
+vale docs/latest/path/to/your/page.md
+```
+
+or this command to check all documents
+
+```
+vale docs
+```
+
+Example output of the linter:
+
+```
+ docs/latest/installation/in-cluster/index.md
+ 9:4     suggestion  'Using Helm' should use         Microsoft.Headings
+                     sentence-style capitalization.
+ 12:57   warning     Try to avoid using              Microsoft.We
+                     first-person plural like
+                     'our'.
+ 22:11   error       Use 'it's' instead of 'it is'.  Microsoft.Contractions
+ ...
+```
+
 ### Latest Docs Built
 
 Latest docs build: [920445e](https://github.com/headlamp-k8s/headlamp/commit/920445e2f826e7fd7466a03bf5e58cf7cf714b01)
