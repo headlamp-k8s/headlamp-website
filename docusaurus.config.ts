@@ -80,8 +80,18 @@ const config: Config = {
       {
         docs: {
           sidebarPath: "./sidebars.ts",
-          editUrl:
-            "https://github.com/headlamp-k8s/headlamp-website/edit/main/",
+          editUrl: (docPathInfo) => {
+            const docPathStr = docPathInfo.docPath;
+
+            if (docPathStr) {
+              // Remove 'latest' from the docPath
+              const pathWithoutLatest = docPathStr.replace(/^latest\//, '/docs/');
+              return `https://github.com/headlamp-k8s/headlamp/edit/main${pathWithoutLatest}`;
+            }
+
+            // Return an empty string if docPath is not valid
+            return '';
+          },
         },
         blog: {
           showReadingTime: true,
