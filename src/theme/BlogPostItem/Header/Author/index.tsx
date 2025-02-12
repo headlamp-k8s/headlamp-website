@@ -14,6 +14,7 @@ function MaybeLink(props: LinkProps): JSX.Element {
 export default function BlogPostItemHeaderAuthor({
   author,
   className,
+  useSeparator = false,
 }: Props): JSX.Element {
   const { name, title, url, imageURL, email } = author;
   const link = url || (email && `mailto:${email}`) || undefined;
@@ -29,7 +30,7 @@ export default function BlogPostItemHeaderAuthor({
         <div className="avatar__intro">
           <div className="avatar__name">
             <MaybeLink href={link}>
-              <span>{name}</span>
+              <span>{name}</span>{useSeparator && <span>,</span>}
             </MaybeLink>
           </div>
           {title && <small className="avatar__subtitle">{title}</small>}
