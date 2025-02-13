@@ -27,6 +27,7 @@ export default function BlogPostItemHeaderAuthors({
               // Handle author images using relative paths
               imageURL: assets.authorsImageUrls[idx] ?? author.imageURL,
             }}
+            useSeparator={idx < authorsCount - 1}
           />
         </div>
       ))}
