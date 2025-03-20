@@ -205,6 +205,10 @@ const config: Config = {
               label: "Mastodon",
               href: "https://fosstodon.org/@headlamp",
             },
+            {
+              label: "Bluesky",
+              href: "https://bsky.app/profile/headlamp.dev",
+            },
           ],
         },
         {
