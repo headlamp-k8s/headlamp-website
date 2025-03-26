@@ -5,7 +5,7 @@ image: ./splash.jpg
 authors: ["will-case", "joaquim-rocha"]
 ---
 
-In November 2024, we launched the Flux plugin for Headlamp, bringing powerful
+In November 2024, we [launched the Flux UI plugin for Headlamp](/blog/2024/11/07/flux-ui), bringing powerful
 GitOps capabilities to Headlamp users, in an intuitive and visual way. Since then, we've received valuable feedback from the community, and we're excited to announce an updated version of the Flux plugin with several new features and improvements.
 
 <!--truncate-->
@@ -18,7 +18,7 @@ including the version and checks related to Flux’s installation. Additionally,
 it offers a graphical representation of the health of your deployments, making
 it easier to manage and monitor them effectively.
 
-[VIDEO FOR OVERVIEW]
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ss77cuwrHQM?si=FTq-r23LzKgbGbQC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Flagger Integration
 
@@ -27,7 +27,7 @@ progressive delivery tool that automates the release process for applications
 running on Kubernetes. With this integration, the Flux UI now supports
 visualizing different update strategies.
 
-[VIDEO FOR FLAGGER]
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/HSWOZexhfDc?si=qSpTGDD9PKEnn_ZI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## New Map View for Flux
 
@@ -38,9 +38,20 @@ feature offers a visual representation of your Flux resources and how they
 relate to each other, providing a clearer understanding of your deployment
 architecture.
 
+![A screenshot of Flux resources being displayed in the Map](./flux-map.png)
+
 ## Bug Fixes and Community Contributions
 
 This update also includes several bug fixes and improvements, thanks to the
 contributions from our amazing community members: Stefan Prodan, Kingdon
 Barrett, Matthijs Galesloot, and George Gaal. We appreciate your guidance,
 support, and dedication to making the Flux UI better.
+
+## Try this update
+
+To try these new changes, just install or update the Flux UI plugin from the
+Plugin Catalog, if using the desktop version of Headlamp, or update to the latest
+[container image](https://github.com/headlamp-k8s/plugins/pkgs/container/headlamp-plugin-flux)
+if you are deploying on the web.
+
+We hope you enjoy this update!
