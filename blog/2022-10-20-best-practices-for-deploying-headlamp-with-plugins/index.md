@@ -19,7 +19,7 @@ Hence, in this blog post we will walk you through how to manage and deploy Headl
 
 Headlamp uses **frontend plugins**, which are JavaScript bundles that are loaded by the frontend. You can read about how to use or develop plugins in our plugin [development documentation](/docs/latest/development/plugins/building/). This article is about _deploying_ -- rather than _developing_ -- plugins.
 
-We will be using 3 plugins from the [examples](https://github.com/headlamp-k8s/headlamp/tree/main/plugins/examples) we have in Headlamp’s repository. Those are the Pod Counter, Change logo and Sidebar. Headlamp expects the plugins to be built and placed in the following directory structure to load them:
+We will be using 3 plugins from the [examples](https://github.com/kubernetes-sigs/headlamp/tree/main/plugins/examples) we have in Headlamp’s repository. Those are the Pod Counter, Change logo and Sidebar. Headlamp expects the plugins to be built and placed in the following directory structure to load them:
 
 ```
 <plugins-dir>
@@ -115,7 +115,7 @@ We will use the Headlamp Helm chart to deploy Headlamp with the container image 
 
 Add the Headlamp Helm chart using the following command
 
-> helm repo add headlamp [https://headlamp-k8s.github.io/headlamp/](https://headlamp-k8s.github.io/headlamp/)
+> helm repo add headlamp [https://kubernetes-sigs.github.io/headlamp/](https://kubernetes-sigs.github.io/headlamp/)
 
 The following values.yaml configures the Helm chart to create a persistent volume and mount to the path `/build/plugins`. t also configures an init container that mounts the `headlamp` volume and copies the plugins to the `/build/plugins` folder. The same volumeMount is used in the `headlamp` container and the `pluginsDir` is set to `/build/plugins`.
 
