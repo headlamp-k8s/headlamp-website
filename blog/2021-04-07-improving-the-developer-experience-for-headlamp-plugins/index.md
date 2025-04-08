@@ -31,7 +31,7 @@ For making the plugin creation and programming easier, we revamped the `@kinvolk
 
 Since plugins were initially developed with the “in-cluster” deployments in mind, for different vendors to provide a unique Kubernetes web UI to their users, Headlamp’s desktop apps did not support the use of plugins.
 
-With this new [0.3.0 version](https://github.com/headlamp-k8s/headlamp/releases/tag/v0.3.0)
+With this new [0.3.0 version](https://github.com/kubernetes-sigs/headlamp/releases/tag/v0.3.0)
 however, the Headlamp desktop app has full support for plugins. It now looks for changes and automatically reloads the UI as well, if a plugin is changed. This effectively means that plugin developers no longer need to clone Headlamp's repository and build it just for developing plugins, as using one of the desktop applications works for loading and seeing any changes throughout the plugins' development.
 
 # How to make a Headlamp plugin
@@ -46,7 +46,7 @@ We can break down the development resources for a Headlamp plugin into: examples
 
 ## Examples
 
-As developers, we are used to learning by looking into others’ code. So if you are also like that, you can take a look at the [plugins examples folder](https://github.com/headlamp-k8s/headlamp/tree/main/plugins/examples) we have as part of Headlamp’s repository, as well as the [plugins](https://github.com/kinvolk/lokomotive-web-ui/tree/master/plugins) we have as part of the Lokomotive Web UI.
+As developers, we are used to learning by looking into others’ code. So if you are also like that, you can take a look at the [plugins examples folder](https://github.com/kubernetes-sigs/headlamp/tree/main/plugins/examples) we have as part of Headlamp’s repository, as well as the [plugins](https://github.com/kinvolk/lokomotive-web-ui/tree/master/plugins) we have as part of the Lokomotive Web UI.
 
 ## A component playground
 
@@ -78,8 +78,8 @@ Be sure to check more details on deploying plugins in the “[Building and Shipp
 # Your plugins
 
 We built the plugins capability for enabling use-cases beyond what we perceive as core to the experience of managing Kubernetes, and are looking forward to seeing what others can do with it. Moreover, we are also planning on having an official list of plugins soon. \
-So do let us know what plugins you are working or interested in working on! Or tell us what we need to improve to support your use-case through plugins. You can reach us at the [#headlamp](https://kubernetes.slack.com/messages/headlamp) channel in the Kubernetes Slack, or file an issue on the [Headlamp repo](https://github.com/headlamp-k8s/headlamp).
+So do let us know what plugins you are working or interested in working on! Or tell us what we need to improve to support your use-case through plugins. You can reach us at the [#headlamp](https://kubernetes.slack.com/messages/headlamp) channel in the Kubernetes Slack, or file an issue on the [Headlamp repo](https://github.com/kubernetes-sigs/headlamp).
 
 # … but that’s not all!
 
-While this article is about the new plugin development experience, we do have other new features in this Headlamp 0.3.0 release. For example, we now support ARM64 Apple Silicon (M1), a new YAML view for resources, and more! So make sure to also check out this new version's [release notes](https://github.com/headlamp-k8s/headlamp/releases/tag/v0.3.0).
+While this article is about the new plugin development experience, we do have other new features in this Headlamp 0.3.0 release. For example, we now support ARM64 Apple Silicon (M1), a new YAML view for resources, and more! So make sure to also check out this new version's [release notes](https://github.com/kubernetes-sigs/headlamp/releases/tag/v0.3.0).
