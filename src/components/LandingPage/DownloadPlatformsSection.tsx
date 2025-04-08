@@ -101,7 +101,7 @@ export function DownloadPlatformsContent() {
               <Link href="https://helm.sh/">Helm</Link>. Run the following:
             </p>
             <CodeBlock language="bash" className="fit-content">
-              {`helm repo add headlamp https://headlamp-k8s.github.io/headlamp/
+              {`helm repo add headlamp https://kubernetes-sigs.github.io/headlamp/
 helm install my-headlamp headlamp/headlamp --namespace kube-system`}
             </CodeBlock>
             <Link to="/docs/latest/installation/in-cluster/#using-helm">
@@ -115,7 +115,7 @@ helm install my-headlamp headlamp/headlamp --namespace kube-system`}
             </p>
             <CodeBlock language="bash" className="fit-content">
               kubectl apply -f
-              https://raw.githubusercontent.com/headlamp-k8s/headlamp/main/kubernetes-headlamp.yaml
+              https://raw.githubusercontent.com/kubernetes-sigs/headlamp/main/kubernetes-headlamp.yaml
             </CodeBlock>
             <Link to="/docs/latest/installation/in-cluster/#using-simple-yaml">
               Learn more about installing Headlamp with kubectl apply
@@ -139,7 +139,8 @@ helm install my-headlamp headlamp/headlamp --namespace kube-system`}
           <TabItem value="glasskube" label="Glasskube">
             <p>
               Install Headlamp in your cluster using{" "}
-              <Link href="https://glasskube.dev/">Glasskube</Link>. Run the following:
+              <Link href="https://glasskube.dev/">Glasskube</Link>. Run the
+              following:
             </p>
             <CodeBlock language="bash" className="fit-content">
               {`glasskube install headlamp`}
