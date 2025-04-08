@@ -28,7 +28,7 @@ _Note:_ It may be nice to know that both of these testing methods are used by He
 
 ## 1. Storybook Snapshot Test Example
 
-Here are three story variants defined for the "Message" component in the [pod-counter example plugin](https://github.com/headlamp-k8s/headlamp/blob/main/plugins/examples/pod-counter/src/Message.stories.tsx). Namely "Error," "SmallAmount," and "LargeAmount," with different props to showcase the component's behavior and appearance under various conditions and states.
+Here are three story variants defined for the "Message" component in the [pod-counter example plugin](https://github.com/kubernetes-sigs/headlamp/blob/main/plugins/examples/pod-counter/src/Message.stories.tsx). Namely "Error," "SmallAmount," and "LargeAmount," with different props to showcase the component's behavior and appearance under various conditions and states.
 
 ![Storybook screenshot](./storybook.png)
 _Here is the storybook interface showing the different states for the Message component in isolation._
@@ -78,7 +78,7 @@ LargeAmount.args: {
 
 [React Testing Library](https://testing-library.com/docs/react-testing-library/intro) is a popular way to test react components.
 
-Here's an example of a [Message.test.tsx](https://github.com/headlamp-k8s/headlamp/blob/main/plugins/examples/pod-counter/src/Message.test.tsx) file for testing a Message component.
+Here's an example of a [Message.test.tsx](https://github.com/kubernetes-sigs/headlamp/blob/main/plugins/examples/pod-counter/src/Message.test.tsx) file for testing a Message component.
 
 ```tsx
 // A react testing lib example test for the Message component.
