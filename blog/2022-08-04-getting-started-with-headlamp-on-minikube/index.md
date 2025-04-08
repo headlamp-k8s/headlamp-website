@@ -7,7 +7,7 @@ title: "Getting started with Headlamp using Minikube"
 image: ./headlamp-on-minikube/headlamp-minikube.png
 ---
 
-[Minikube](https://minikube.sigs.k8s.io/) makes it easy to learn and develop for Kubernetes locally. It allows users to get Kubernetes up and running on a single machine very quickly, and its **addons** make it easy to enable more functionality or deploy applications. This makes Minikube ideal for new Kubernetes users, or for quick tests/deployments. [Headlamp](https://github.com/headlamp-k8s/headlamp#readme) is therefore a great complement for Minikube. After all, as a graphical user interface, Headlamp offers a more guided way to interact with Kubernetes than the typical command-line experience.
+[Minikube](https://minikube.sigs.k8s.io/) makes it easy to learn and develop for Kubernetes locally. It allows users to get Kubernetes up and running on a single machine very quickly, and its **addons** make it easy to enable more functionality or deploy applications. This makes Minikube ideal for new Kubernetes users, or for quick tests/deployments. [Headlamp](https://github.com/kubernetes-sigs/headlamp#readme) is therefore a great complement for Minikube. After all, as a graphical user interface, Headlamp offers a more guided way to interact with Kubernetes than the typical command-line experience.
 
 So, we added a [Headlamp addon for Minikube](https://minikube.sigs.k8s.io/docs/handbook/addons/headlamp/)!
 
