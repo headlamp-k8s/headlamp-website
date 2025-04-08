@@ -69,7 +69,7 @@ const usePlatform = (): Platform => {
 };
 
 const latestReleasePromise = fetch(
-  "https://api.github.com/repos/headlamp-k8s/headlamp/releases/latest"
+  "https://api.github.com/repos/kubernetes-sigs/headlamp/releases/latest"
 ).then((response) => response.json());
 
 const useLatestRelease = () => {
