@@ -30,7 +30,7 @@ This command generates static content into the `build` directory and can be serv
 
 ## Documentation
 
-This website shows Headlamp's documentation. The documentation is written in Markdown and is located in the `docs` directory of the [headlamp](https://github.com/headlamp-k8s/headlamp) repository.
+This website shows Headlamp's documentation. The documentation is written in Markdown and is located in the `docs` directory of the [headlamp](https://github.com/kubernetes-sigs/headlamp) repository.
 
 When this website is build, it runs the script [link-docs.sh](./link-docs.sh) which creates symlinks to the documentation in the `docs` directory of the Headlamp repository.
 
@@ -89,7 +89,7 @@ Example output of the linter:
 
 ### Latest Docs Built
 
-Latest docs build: [7f98a8d](https://github.com/headlamp-k8s/headlamp/tree/7f98a8dc7c79a3a732d2a95b01a262443b37fcfe/docs)
+Latest docs build: [7f98a8d](https://github.com/kubernetes-sigs/headlamp/tree/7f98a8dc7c79a3a732d2a95b01a262443b37fcfe/docs)
 
 The line below is updated automatically by a Github Action to point to the latest version of the documentation and trigger a new build of the website.
 
