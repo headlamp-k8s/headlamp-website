@@ -11,32 +11,32 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout current repository
-      uses: actions/checkout@v2
+      - name: Checkout current repository
+        uses: actions/checkout@v2
 
-    - name: Clone headlamp repository
-      run: |
-        git clone https://github.com/headlamp-k8s/headlamp.git
-        cd headlamp
-        LATEST_COMMIT=$(git log -n 1 --pretty=format:"%H" -- docs)
-        echo "LATEST_COMMIT=$LATEST_COMMIT" >> $GITHUB_ENV
+      - name: Clone headlamp repository
+        run: |
+          git clone https://github.com/kubernetes-sigs/headlamp.git
+          cd headlamp
+          LATEST_COMMIT=$(git log -n 1 --pretty=format:"%H" -- docs)
+          echo "LATEST_COMMIT=$LATEST_COMMIT" >> $GITHUB_ENV
 
-    - name: Update README.md
-      run: |
-        README_FILE="README.md"
-        DOCS_LINK="https://github.com/headlamp-k8s/headlamp/tree/$LATEST_COMMIT/docs"
-        LATEST_COMMIT_SHORT=$(echo $LATEST_COMMIT | cut -c1-7)
-        sed -i "s|^Latest docs build: \[.*\]\(.*\)|Latest docs build: \[$LATEST_COMMIT_SHORT\]($DOCS_LINK)|" $README_FILE
-      env:
-        LATEST_COMMIT: ${{ env.LATEST_COMMIT }}
+      - name: Update README.md
+        run: |
+          README_FILE="README.md"
+          DOCS_LINK="https://github.com/kubernetes-sigs/headlamp/tree/$LATEST_COMMIT/docs"
+          LATEST_COMMIT_SHORT=$(echo $LATEST_COMMIT | cut -c1-7)
+          sed -i "s|^Latest docs build: \[.*\]\(.*\)|Latest docs build: \[$LATEST_COMMIT_SHORT\]($DOCS_LINK)|" $README_FILE
+        env:
+          LATEST_COMMIT: ${{ env.LATEST_COMMIT }}
 
-    - name: Commit and push changes
-      run: |
-        git config --global user.name 'github-actions[bot]'
-        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-        git add README.md
-        git checkout -b update-readme
-        git commit -m "README: Update with latest docs build (automated commit)"
-        git push -f origin update-readme
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Commit and push changes
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add README.md
+          git checkout -b update-readme
+          git commit -m "README: Update with latest docs build (automated commit)"
+          git push -f origin update-readme
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
