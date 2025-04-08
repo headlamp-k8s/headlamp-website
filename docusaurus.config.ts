@@ -22,18 +22,18 @@ const config: Config = {
     "docusaurus-lunr-search",
     function (context, options) {
       return {
-        name: 'webpack-configuration-plugin',
+        name: "webpack-configuration-plugin",
         configureWebpack(config, isServer, utils) {
           return {
             resolve: {
               symlinks: false,
-            }
+            },
           };
-        }
+        },
       };
     },
     [
-      '@docusaurus/plugin-client-redirects',
+      "@docusaurus/plugin-client-redirects",
       {
         createRedirects(existingPath) {
           // Redirect /docs/ to /docs/latest/
@@ -85,12 +85,15 @@ const config: Config = {
 
             if (docPathStr) {
               // Remove 'latest' from the docPath
-              const pathWithoutLatest = docPathStr.replace(/^latest\//, '/docs/');
-              return `https://github.com/headlamp-k8s/headlamp/edit/main${pathWithoutLatest}`;
+              const pathWithoutLatest = docPathStr.replace(
+                /^latest\//,
+                "/docs/"
+              );
+              return `https://github.com/kubernetes-sigs/headlamp/edit/main${pathWithoutLatest}`;
             }
 
             // Return an empty string if docPath is not valid
-            return '';
+            return "";
           },
         },
         blog: {
@@ -166,7 +169,7 @@ const config: Config = {
           position: "right",
         },
         {
-          href: "https://github.com/headlamp-k8s/headlamp",
+          href: "https://github.com/kubernetes-sigs/headlamp",
           label: "GitHub",
           position: "right",
         },
@@ -195,7 +198,7 @@ const config: Config = {
             },
             {
               label: "Github",
-              href: "https://github.com/headlamp-k8s/headlamp",
+              href: "https://github.com/kubernetes-sigs/headlamp",
             },
             {
               label: "Twitter",
