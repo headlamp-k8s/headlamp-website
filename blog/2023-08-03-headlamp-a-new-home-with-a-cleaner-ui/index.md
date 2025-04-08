@@ -7,7 +7,7 @@ title: "Headlamp 0.19.0: A new home, with a cleaner UI"
 image: ./moderntrain.jpg
 ---
 
-We are excited to announce the release of [Headlamp 0.19.0](https://github.com/headlamp-k8s/headlamp/releases/tag/v0.19.0), the latest version of our web UI for Kubernetes. This release brings some major improvements to the user experience, as well as some new features that make working with Kubernetes easier and more efficient. In this blog post, we highlight some of those new features.
+We are excited to announce the release of [Headlamp 0.19.0](https://github.com/kubernetes-sigs/headlamp/releases/tag/v0.19.0), the latest version of our web UI for Kubernetes. This release brings some major improvements to the user experience, as well as some new features that make working with Kubernetes easier and more efficient. In this blog post, we highlight some of those new features.
 
 <!--truncate-->
 
@@ -31,10 +31,10 @@ This way, you can see more information about your resources at a glance, without
 
 ## Get the new Headlamp
 
-These are just some of the highlights of Headlamp 0.19.0. There are many more bug fixes and enhancements that you can find in the [release notes](https://github.com/headlamp-k8s/headlamp/releases/tag/v0.19.0).
+These are just some of the highlights of Headlamp 0.19.0. There are many more bug fixes and enhancements that you can find in the [release notes](https://github.com/kubernetes-sigs/headlamp/releases/tag/v0.19.0).
 
 If you haven’t tried Headlamp, check out the instructions on how to install it as either a [desktop application](/docs/latest/installation/desktop/), or [in-cluster](/docs/latest/installation/in-cluster/).
 
-We hope you enjoy using Headlamp and find it useful for managing your Kubernetes clusters. We welcome your feedback and suggestions on how we can make Headlamp even better. You can reach us on [GitHub](https://github.com/headlamp-k8s/headlamp), [Slack](https://kubernetes.slack.com/messages/headlamp), [Mastodon](https://fosstodon.org/@headlamp) or [Twitter/X](https://twitter.com/headlamp_ui).
+We hope you enjoy using Headlamp and find it useful for managing your Kubernetes clusters. We welcome your feedback and suggestions on how we can make Headlamp even better. You can reach us on [GitHub](https://github.com/kubernetes-sigs/headlamp), [Slack](https://kubernetes.slack.com/messages/headlamp), [Mastodon](https://fosstodon.org/@headlamp) or [Twitter/X](https://twitter.com/headlamp_ui).
 
 Thank you for using Headlamp and stay tuned for more updates!
