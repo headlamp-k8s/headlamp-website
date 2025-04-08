@@ -4,7 +4,7 @@ set -euo pipefail
 set -x
 
 # Clone headlamp repository from github
-git clone https://github.com/headlamp-k8s/headlamp.git --depth=1 && cd headlamp
+git clone https://github.com/kubernetes-sigs/headlamp.git --depth=1 && cd headlamp
 
 echo '
 version: "3"
