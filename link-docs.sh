@@ -7,7 +7,7 @@ TARGET=${HEADLAMP_DOCS:-${1}}
 if [ ! -e "$TARGET" ]; then
   if [ ! -e "./headlamp" ]; then
     echo "Cloning headlamp/docs repository..."
-    git clone --depth 1 https://github.com/headlamp-k8s/headlamp.git ./headlamp
+    git clone --depth 1 https://github.com/kubernetes-sigs/headlamp.git ./headlamp
   elif [ -d "./headlamp/.git" ]; then
     echo "Updating headlamp/docs repository..."
     git -C ./headlamp pull
