@@ -25,7 +25,7 @@ Despite the good number of alternatives, the reality is that none of the solutio
 
 # Introducing Headlamp
 
-Today, I am **proud to announce the general availability of a new UI for Kubernetes**: [Headlamp](https://github.com/headlamp-k8s/headlamp).
+Today, I am **proud to announce the general availability of a new UI for Kubernetes**: [Headlamp](https://github.com/kubernetes-sigs/headlamp).
 
 ![Headlamp](./headlamp_cluster_overview.png)
 
