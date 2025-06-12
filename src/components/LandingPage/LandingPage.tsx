@@ -58,7 +58,7 @@ export default function LandingPage(): JSX.Element {
               <a href="https://cncf.io" target="_blank">
                 Cloud Native Computing Foundation
               </a>{" "}
-              Sandbox Project.
+              project, as part of the Kubernetes SIG UI.
             </p>
             <div
               style={{
