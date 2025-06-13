@@ -133,6 +133,14 @@ const config: Config = {
 
   themeConfig: {
     image: "img/social-card.png",
+    announcementBar: {
+      id: 'support_us',
+      content:
+        'Important: Warnings from Mac and Windows when running the Headlamp desktop apps. <a target="_blank" href="/docs/latest/installation/desktop/">Read more about unsigned apps</a>',
+      backgroundColor: '#f2e600',
+      textColor: '#070f7f',
+      isCloseable: false,
+    },
     metadata: [
       { name: "og:url", content: "/" },
       { name: "og:site_name", content: "Your Kubernetes Experience" },
