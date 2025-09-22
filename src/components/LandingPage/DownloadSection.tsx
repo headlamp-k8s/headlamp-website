@@ -34,7 +34,7 @@ const downloadInfo: Record<Platform, DownloadInfo> = {
   mac: {
     label: "Download for macOS",
     fallbackDownloadLink: "/docs/latest/installation/desktop/mac-installation",
-    script: "brew install headlamp",
+    script: "brew install --cask headlamp",
   },
   linux: {
     label: "Download for Linux",
