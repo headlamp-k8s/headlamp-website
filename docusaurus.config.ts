@@ -168,6 +168,7 @@ const config: Config = {
           activeBaseRegex: `^\/$`,
         },
         { to: "/blog", label: "Blog", position: "left" },
+        { to: "/plugins", label: "Plugins", position: "left" },
         {
           type: "docSidebar",
           sidebarId: "mainSidebar",
