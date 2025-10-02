@@ -5,7 +5,7 @@ import Layout from "@theme/Layout";
 import clsx from "clsx";
 
 import DownloadSection from "./DownloadSection";
-import CncfLogo from "./images/cncf_light.svg";
+import KubernetesLogo from "../../../static/img/kubernetes-horizontal-color.svg";
 import styles from "./LandingPage.module.css";
 import DownloadPlatformsSection from "./DownloadPlatformsSection";
 import SupportedClusters from "./SupportedClusters";
@@ -54,11 +54,11 @@ export default function LandingPage(): JSX.Element {
         <section className={clsx(styles.aboutContainer)}>
           <div className={clsx("container", styles.about)}>
             <p>
-              We are a{" "}
-              <a href="https://cncf.io" target="_blank">
-                Cloud Native Computing Foundation
+              Headlamp is an official{" "}
+              <a href="https://kubernetes.io" target="_blank">
+                Kubernetes
               </a>{" "}
-              project, as part of the Kubernetes SIG UI.
+              sub-project and part of the SIG UI.
             </p>
             <div
               style={{
@@ -69,7 +69,7 @@ export default function LandingPage(): JSX.Element {
                 maxWidth: "100%",
               }}
             >
-              <CncfLogo width="100%" />
+              <KubernetesLogo width="100%" />
             </div>
           </div>
         </section>
