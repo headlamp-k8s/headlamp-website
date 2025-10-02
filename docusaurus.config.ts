@@ -190,10 +190,10 @@ const config: Config = {
       style: "light",
       logo: {
         alt: "Headlamp logo",
-        src: "img/logo.svg",
-        srcDark: "img/logo-dark.svg",
-        width: "155",
-        height: "32",
+        src: "img/kubernetes-horizontal-color.svg",
+        srcDark: "img/kubernetes-horizontal-white-text.svg",
+        width: "180",
+        height: "48",
       },
       links: [
         {
@@ -247,7 +247,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright ${new Date().getFullYear()} The Headlamp Contributors<br />
+      copyright: `Copyright ${new Date().getFullYear()} The Kubernetes Authors<br />
       The Linux Foundation® (TLF) has registered trademarks and uses trademarks.<br />
       For a list of TLF trademarks, see <a href="https://www.linuxfoundation.org/legal/trademark-usage" target="_blank">
       Trademark Usage</a>`,
