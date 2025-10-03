@@ -174,6 +174,7 @@ const config: Config = {
           position: "left",
           label: "Docs",
         },
+        { to: "/plugins", label: "Plugins", position: "left" },
         {
           href: "https://kubernetes.slack.com/messages/headlamp",
           label: "Slack",
