@@ -13,7 +13,9 @@
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
-    "typecheck": "tsc"
+    "typecheck": "tsc",
+    "add-plugin": "node ./src/components/PluginsPage/add-plugin.js",
+    "update-plugins": "node ./src/components/PluginsPage/update-plugins.js"
   },
   "dependencies": {
     "@docusaurus/core": "^3.4.0",
@@ -27,6 +29,7 @@
     "@mdx-js/react": "^3.0.0",
     "clsx": "^2.0.0",
     "docusaurus-lunr-search": "^3.4.0",
+    "js-yaml": "^4.1.0",
     "prism-react-renderer": "^2.3.0",
     "react": "^18.0.0",
     "react-aria-components": "^1.2.1",
