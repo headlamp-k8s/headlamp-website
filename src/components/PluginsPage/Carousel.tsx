@@ -80,7 +80,7 @@ export function Carousel() {
                     >
                         <div>
                             <a href={items[activeIndex].href} className={stylesPlugin.cardLink} target="_blank" rel="noreferrer">
-                                <img src={items[activeIndex].imageSrc} alt={items[activeIndex].imageAlt} className={stylesPlugin.cardImage} loading="lazy" />
+                                <img src={"/" + items[activeIndex].imageSrc} alt={items[activeIndex].imageAlt} className={stylesPlugin.cardImage} loading="lazy" />
                             </a>
                         </div>
                         <div className={stylesPlugin.featureCardBody}>
