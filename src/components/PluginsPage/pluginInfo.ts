@@ -15,10 +15,10 @@ export const featuredPluginsInfo: PluginInfo[] = [
         imageAlt: "AI Assistant Plugin",
     },
     {
-        displayName: "cert-manager",
-        featDescription: "The cert-manager plugin for Headlamp adds a sidebar item for cert-manager, allowing users to view and manage cert-manager resources directly from the dashboard. This integration simplifies the management of TLS certificates in Kubernetes, providing an easy-to-use interface for handling certificate issuance, renewal, and overall lifecycle management within Headlamp.",
-        imageSrc: "img/pluginImages/CertManagerImage.png",
-        imageAlt: "cert-manager Plugin",
+        displayName: "Flux",
+        featDescription: "The Flux plugin visualizes Flux in Headlamp, enabling GitOps by syncing clusters with config sources (e.g., Git) and auto-updating configs when new code is deployed.",
+        imageSrc: "img/pluginImages/flux.png",
+        imageAlt: "Flux Plugin",
     },
     {
         displayName: "Gatekeeper",
