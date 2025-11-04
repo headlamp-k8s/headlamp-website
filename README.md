@@ -56,6 +56,27 @@ When run without arguments, the script will attempt to clone the Headlamp reposi
 $ ./link-docs.sh
 ```
 
+## Plugins
+
+To add plugins to the featured plugins list on the plugins page:
+
+- Be sure to use the link from the github page view of the plugin YAML file
+  ex. https://github.com/headlamp-k8s/plugins/blob/main/example-change-logo/artifacthub-pkg.yml
+
+```
+npm run add-plugin <link-to-plugin-yaml>
+```
+
+This will download the plugin YAML file, parse it, and add it to the list of plugin data files in `src/components/PluginsPage/PluginData`.
+
+### For adding featured plugins
+
+- Run the same command as above (if not already added)
+- Locate the `featuredPluginsInfo` object in `src/components/PluginsPage/pluginInfo.ts`
+- Add a new entry to the `featuredPluginsInfo` array for the new plugin, using the same format as the existing entries
+- Be sure to include `displayName`, `featDescription`, `imageSrc`, and `imageAlt` fields
+- Please note that the `displayName` must match the `displayName` field in the plugin YAML file in `src/components/PluginsPage/PluginData` for the plugin to be recognized as featured
+
 ### Documentation linting
 
 You can use [Vale](https://vale.sh/) linter to check for common mistakes, spelling errors and validate with [Microsoft Writing Style Guide](https://learn.microsoft.com/en-us/style-guide/welcome/).
@@ -96,24 +117,3 @@ The line below is updated automatically by a Github Action to point to the lates
 ## License
 
 Headlamp is licensed under the Apache License, Version 2.0. See [LICENSE](./LICENSE) for the full license text.
-
-## Plugins
-
-To add plugins to the featured plugins list to the plugins page:
-
-- Be sure to use the link from the github page view of the plugin YAML file
-  ex. https://github.com/headlamp-k8s/plugins/blob/main/example-change-logo/artifacthub-pkg.yml
-
-```
-npm run add-plugin <link-to-plugin-yaml>
-```
-
-This will download the plugin YAML file, parse it, and add it to the list of plugin data files in `src/components/PluginsPage/PluginData`.
-
-### For adding featured plugins
-
-- Run the same command as above (if not already added)
-- Locate the `featuredPluginsInfo` object in `src/components/PluginsPage/pluginInfo.ts`
-- Add a new entry to the `featuredPluginsInfo` array for the new plugin, using the same format as the existing entries
-- Be sure to include `displayName`, `featDescription`, `imageSrc`, and `imageAlt` fields
-- Please note that the `displayName` must match the `displayName` field in the plugin YAML file in `src/components/PluginsPage/PluginData` for the plugin to be recognized as featured
