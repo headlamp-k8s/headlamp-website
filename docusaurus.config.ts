@@ -176,6 +176,11 @@ const config: Config = {
           label: "Docs",
         },
         {
+          to: "/docs/latest/learn",
+          label: "Learn",
+          position: "left",
+        },
+        {
           href: "https://kubernetes.slack.com/messages/headlamp",
           label: "Slack",
           position: "right",
@@ -244,6 +249,10 @@ const config: Config = {
             {
               label: "F.A.Q.",
               href: "/docs/latest/faq",
+            },
+            {
+              label: "Learn",
+              href: "/docs/latest/learn",
             },
           ],
         },
