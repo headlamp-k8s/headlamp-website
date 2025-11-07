@@ -9,6 +9,7 @@ import KubernetesLogo from "../../../static/img/kubernetes-horizontal-color.svg"
 import styles from "./LandingPage.module.css";
 import DownloadPlatformsSection from "./DownloadPlatformsSection";
 import SupportedClusters from "./SupportedClusters";
+import AdoptersSection from "./AdoptersSection";
 import { FeaturesDemo } from "./FeaturesDemo";
 import { Features } from "./Features";
 
@@ -48,6 +49,7 @@ export default function LandingPage(): JSX.Element {
           />
         </section>
         <Features />
+        <AdoptersSection />
         <DownloadPlatformsSection />
         <SupportedClusters />
 

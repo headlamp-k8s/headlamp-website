@@ -18,6 +18,41 @@ const config: Config = {
   onBrokenLinks: "warn",
   onBrokenMarkdownLinks: "warn",
 
+  customFields: {
+    // Companies must be listed in alphabetical order by name
+    adopters: [
+      {
+        name: "MBCP",
+        logo: "mbcp-logo.png",
+        url: "https://www.millenniumbcp.pt/",
+      },
+      {
+        name: "Microsoft",
+        logo: "microsoft-logo.svg",
+        logoDark: "microsoft-logo-white.svg",
+        url: "https://www.microsoft.com",
+      },
+      {
+        name: "Oracle Cloud Native Environment",
+        logo: "ocne-logo.svg",
+        logoDark: "ocne-logo-white.svg",
+        url: "https://docs.oracle.com/en/learn/ocne-ui/index.html",
+      },
+      {
+        name: "Swisscom",
+        logo: "swisscom-logo.png",
+        logoDark: "swisscom-logo-white.png",
+        url: "https://www.swisscom.com",
+      },
+      {
+        name: "Whizus",
+        logo: "whizus-logo.png",
+        logoDark: "whizus-logo-white.png",
+        url: "https://www.whizus.com",
+      },
+    ],
+  },
+
   plugins: [
     "docusaurus-lunr-search",
     function (context, options) {
