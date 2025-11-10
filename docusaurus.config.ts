@@ -22,7 +22,7 @@ const config: Config = {
     // Companies must be listed in alphabetical order by name
     adopters: [
       {
-        name: "MBCP",
+        name: "Millennium BCP",
         logo: "mbcp-logo.png",
         url: "https://www.millenniumbcp.pt/",
       },
