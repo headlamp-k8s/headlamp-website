@@ -22,7 +22,7 @@ This year marked a big milestone for the project: Headlamp is now officially par
     <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Q5xkeoj6JiA?si=imPri5QkYHhrI_iI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </figure>
 
-As part of that, we’ve also been sharing more about making Kubernetes approachable for a wider audience, including an [appearance on Enlightening with Whitney Lee](https://www.youtube.com/watch?v=VFOSyKVOPxs) and a [talk at KCD New York 2025](https://www.youtube.com/watch?v=Q7cbT2UBfE0).
+As part of that, we’ve also been sharing more about making Kubernetes approachable for a wider audience, including an [appearance on Enlightning with Whitney Lee](https://www.youtube.com/watch?v=VFOSyKVOPxs) and a [talk at KCD New York 2025](https://www.youtube.com/watch?v=Q7cbT2UBfE0).
 
 ### AKS Desktop Preview
 
@@ -111,9 +111,8 @@ We’ve put real work into making OIDC setup clearer and more resilient, especia
 Changes:
 - User information displayed in the top bar for OIDC-authenticated users
 - PKCE support for more secure authentication flows, as well as hardened token refresh handling
-- Documentation for using the access token using `-oidc-use-access-token=true`
-- Improved support for public OIDC clients like AKS and EKS
-- New guide for setting up Headlamp [on AKS with Azure Entra-ID using OAuth2Proxy](https://headlamp.dev/docs/latest/installation/in-cluster/aks-cluster-oauth/)
+- Improved support for public OIDC clients (e.g., AKS and EKS)
+- New guide for setting up Headlamp [on AKS with Microsoft Entra ID using OAuth2 Proxy](https://headlamp.dev/docs/latest/installation/in-cluster/aks-cluster-oauth/)
 
 Thanks to [David Dobmeier](https://github.com/daviddob) and [Harsh Srivastava](https://github.com/HarshSrivastava275).
 
@@ -123,10 +122,10 @@ We’ve broadened how you deploy and source apps via Headlamp, specifically supp
 
 Changes:
 - A more capable Helm chart with optional backend TLS termination, PodDisruptionBudgets, custom pod labels, and more
-- Improved formatting and added missing access token arg in the Helm chart
+- Improved formatting and added missing `-oidc-use-access-token` arg in the Helm chart
 - New in-cluster Helm support with an `--enable-helm` flag and a service proxy
 
-Thanks to [Vrushali Shah](https://github.com/shahvrushali22) and [Murali Annamneni](https://github.com/muraliinformal) from Oracle, and also to [Pat Riehecky](https://github.com/jcpunk), [Joshua Akers](https://github.com/jda258), [Rostislav Stříbrný](https://github.com/rstribrn), [Rick L](https://github.com/rickliujh),and [Victor](https://github.com/vnea).
+Thanks to [Vrushali Shah](https://github.com/shahvrushali22) and [Murali Annamneni](https://github.com/muraliinformal) from Oracle, and also to [Pat Riehecky](https://github.com/jcpunk), [Joshua Akers](https://github.com/jda258), [Rostislav Stříbrný](https://github.com/rstribrn), [Rick L](https://github.com/rickliujh), and [Victor](https://github.com/vnea).
 
 ### Performance, Accessibility, & UX
 
@@ -165,19 +164,19 @@ Managing Kubernetes often means memorizing commands and juggling tools. Headlamp
     <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/GzXkUuCTcd4?si=HYlGx7pk5LB-VdK1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </figure>
 
-### New Plugins Additions
+### New Plugins
 
 Alongside the new AI Assistant, we’ve been growing Headlamp’s plugin ecosystem so you can bring more of your workflows into a single UI, with integrations like Minikube, Karpenter, and more.
 
 Highlights from the latest plugin releases:
-- Minikube plugin, providing a locally stored single node Minikube cluster
+- Minikube plugin, providing a locally-stored single node Minikube cluster
 - Karpenter plugin, with support for Azure Node Auto-Provisioning (NAP)
 - KEDA plugin, which you can learn more about [here](https://headlamp.dev/blog/2025/07/25/enabling-event-driven-autoscaling-with-the-new-keda-plugin-for-headlamp/)
 - Community-maintained plugins for [Gatekeeper](https://github.com/sozercan/gatekeeper-headlamp-plugin) and [KAITO](https://github.com/kaito-project/headlamp-kaito)
 
 Thanks to [Vrushali Shah](https://github.com/shahvrushali22) and [Murali Annamneni](https://github.com/muraliinformal) from Oracle, and also to [Anirban Singha](https://github.com/SinghaAnirban005), [Adwait Godbole](https://github.com/adwait-godbole), [Sertaç Özercan](https://github.com/sozercan), [Ernest Wong](https://github.com/chewong), and [Chloe Lim](https://github.com/chloe608).
 
-### Other Plugins Updates
+### Other Plugin Updates
 
 Alongside new additions, we’ve also spent time refining plugins that many of you already use, focusing on smoother workflows and better integration with the core UI.
 
