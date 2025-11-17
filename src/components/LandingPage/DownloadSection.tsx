@@ -167,6 +167,48 @@ function DownloadSection({ forcePlatform }: { forcePlatform?: Platform }) {
           </>
         )}
       </div>
+      {(platform === "win" || platform === "mac") && (
+        <div
+          className={styles.announcement}
+          style={{
+            padding: "12px",
+            borderRadius: "4px",
+          }}
+          role="note"
+        >
+          <span
+            aria-hidden="true"
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              marginRight: 8,
+              color: "#f2a900",
+            }}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <path d="M1 21h22L12 2 1 21zM13 18h-2v-2h2v2zm0-4h-2V10h2v4z" />
+            </svg>
+          </span>
+          <strong>Important:</strong>{" "}
+          <span>
+            On warnings from Mac and Windows{" "}
+            <Link
+              to="/docs/latest/installation/desktop/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              when running Headlamp unsigned apps.
+            </Link>
+          </span>
+        </div>
+      )}
       {platform !== "unknown" && (
         <Link
           to="#download-platforms"
