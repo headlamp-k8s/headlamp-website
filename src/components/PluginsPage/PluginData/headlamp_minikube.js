@@ -5,7 +5,7 @@
     "displayName": "minikube",
     "createdAt": "2025-03-28T09:35:50Z",
     "logoURL": "https://raw.githubusercontent.com/kubernetes/minikube/42aa2eab55893d852bf9bb17744c79e7b20f8f71/images/logo/logo.svg",
-    "description": "A UI for managing local minikube clusters. This is an early release (alpha 0.1.0). Feedback welcome.",
+    "description": "A UI for managing local minikube clusters.",
     "annotations": {
         "headlamp/plugin/archive-url": "https://github.com/headlamp-k8s/plugins/releases/download/minikube-0.2.0/headlamp-k8s-minikube-0.2.0.tar.gz",
         "headlamp/plugin/archive-checksum": "SHA256:141e9a97af3c2da2d405faefb4aad624efcb6115277d379a0ee01fd68b763cff",
