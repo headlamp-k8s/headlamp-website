@@ -202,7 +202,7 @@ const config: Config = {
           label: "Home",
           activeBaseRegex: `^\/$`,
         },
-        { to: "/blog", label: "Blog", position: "left" },
+        // { to: "/blog", label: "Blog", position: "left" },
         { to: "/plugins", label: "Plugins", position: "left" },
         {
           type: "docSidebar",
@@ -210,9 +210,19 @@ const config: Config = {
           position: "left",
           label: "Docs",
         },
+        // {
+        //   to: "/communityx",
+        //   label: "CommunityX",
+        //   position: "left",
+        // },
+        // {
+        //   to: "/communityz",
+        //   label: "CommunityZ",
+        //   position: "left",
+        // },
         {
-          to: "/docs/latest/learn",
-          label: "Learn",
+          to: "/community",
+          label: "Community",
           position: "left",
         },
         {
