@@ -1,0 +1,50 @@
+.section {
+  max-width: 1040px;
+  margin: 0 auto 2.75rem;
+  padding: 0 1rem;
+}
+.section:first-of-type {
+  /* Extra top spacing for the first (Live Streams) section */
+  margin-top: 2.5rem;
+}
+.headerRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.85rem;
+}
+.heading {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+.grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+}
+.footerRow {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 0.9rem;
+}
+.moreBtn {
+  background: none;
+  border: 1px solid var(--ifm-toc-border-color, #d9d9d9);
+  border-radius: 6px;
+  padding: 0.45rem 0.8rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: not-allowed; /* placeholder for future interaction */
+  color: var(--ifm-color-emphasis-700);
+}
+.moreBtn:disabled:hover {
+  background: var(--ifm-hover-overlay);
+}
+@media (prefers-color-scheme: dark) {
+  .moreBtn {
+    border-color: #333;
+  }
+}
