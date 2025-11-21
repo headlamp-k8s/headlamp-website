@@ -110,7 +110,7 @@ Example output of the linter:
 
 ### Latest Docs Built
 
-Latest docs build: [a535f13](https://github.com/kubernetes-sigs/headlamp/tree/a535f13/docs)
+Latest docs build: [3689703](https://github.com/kubernetes-sigs/headlamp/tree/36897036a56ccc7726feb4fa597490e865c6faf5/docs)
 
 The line below is updated automatically by a Github Action to point to the latest version of the documentation and trigger a new build of the website.
 
