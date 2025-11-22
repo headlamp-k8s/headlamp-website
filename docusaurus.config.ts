@@ -211,11 +211,6 @@ const config: Config = {
           label: "Docs",
         },
         {
-          to: "/docs/latest/learn",
-          label: "Learn",
-          position: "left",
-        },
-        {
           href: "https://kubernetes.slack.com/messages/headlamp",
           label: "Slack",
           position: "right",
