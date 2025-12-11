@@ -4,7 +4,7 @@
     "name": "gatekeeper",
     "displayName": "Gatekeeper",
     "createdAt": "2025-06-09T22:53:04Z",
-    "description": "Headlamp plugin for Gatekeeper",
+    "description": "A Headlamp plugin for viewing and managing OPA Gatekeeper policies, violations, and more.",
     "logoURL": "https://www.openpolicyagent.org/img/nav/logo.png",
     "screenshots": [
         {
