@@ -1,0 +1,135 @@
+.communityTopbarContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: var(--blog-latest-background);
+  width: 100%;
+}
+
+.communityTopBar {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 50%;
+  /* background-color: blue; */
+}
+
+.communityTopbarItem {
+  text-decoration: none !important;
+  color: var(--ifm-font-color-base);
+  font-weight: 500;
+}
+
+.communityTopbarItem a {
+  text-decoration: none !important;
+}
+
+.communityTopbarItem a:hover {
+  text-decoration: underline;
+}
+
+.communityTopbarTitle {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #343a40;
+}
+
+.communitySidebarContainer {
+  --community-sidebar-offset: 20px; /* extra space below navbar */
+  position: sticky;
+  top: calc(var(--ifm-navbar-height, 64px) + var(--community-sidebar-offset));
+  align-self: start;
+  /* stretch to viewport height minus navbar and offset */
+  min-height: calc(
+    100vh - var(--ifm-navbar-height, 64px) - var(--community-sidebar-offset)
+  );
+  max-height: calc(
+    100vh - var(--ifm-navbar-height, 64px) - var(--community-sidebar-offset)
+  );
+  overflow: auto;
+  padding: 0.5rem 0.75rem;
+  border-right: 1px solid var(--ifm-toc-border-color, #e0e0e0);
+  background: var(--ifm-background-color);
+}
+
+/* Modifier: right-aligned sidebar (use with communitySidebarContainer) */
+.communitySidebarRight {
+  margin-left: auto; /* push to the right in flex layouts */
+  border-right: none;
+  border-left: 1px solid var(--ifm-toc-border-color, #e0e0e0);
+}
+
+.communitySidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  min-width: 220px;
+}
+
+.communitySidebarItem {
+  padding: 0.25rem 0.25rem;
+  border-left: 2px solid transparent;
+}
+
+.communitySidebarItemActive {
+  border-left-color: var(--ifm-color-primary);
+  background: color-mix(in srgb, var(--ifm-color-primary) 8%, transparent);
+}
+
+.communitySidebarLink {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 0.5rem 0.5rem 0.75rem;
+  border-radius: 4px;
+  text-decoration: none !important; /* prevent theme underlines on inactive items */
+  color: var(--ifm-font-color-base);
+  font-weight: 500;
+}
+
+.communitySidebarLink:hover {
+  text-decoration: none;
+  background: var(--ifm-hover-overlay);
+}
+
+.communitySidebarLink:focus-visible {
+  outline: 3px solid var(--ifm-color-primary);
+  outline-offset: 2px;
+}
+
+/* Active link style: bold + underline */
+.communitySidebarLinkActive {
+  font-weight: 700;
+  text-decoration: underline !important;
+  text-underline-offset: 2px;
+}
+
+@media (max-width: 996px) {
+  .communitySidebarContainer {
+    position: static;
+    max-height: none;
+    border-right: none;
+    padding: 0.5rem 0;
+  }
+
+  .communitySidebarRight {
+    border-left: none;
+    margin-left: 0;
+  }
+
+  .communitySidebar {
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 0.5rem;
+  }
+
+  .communitySidebarItem {
+    border-left: none;
+  }
+
+  .communitySidebarItemActive {
+    border-left: none;
+    background: color-mix(in srgb, var(--ifm-color-primary) 8%, transparent);
+    border-bottom: 2px solid var(--ifm-color-primary);
+  }
+}
