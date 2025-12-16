@@ -1,0 +1,13 @@
+{
+  "id": "real-announce-2",
+  "date": "Oct 28th 2025",
+  "image": "/img/announcements/plugin-catalog.jpg",
+  "category": "announcement",
+  "title": "Plugin Catalog (Preview)",
+  "description": "Browse and install community plugins directly in Headlamp (preview).",
+  "body": "The Plugin Catalog preview lets you discover, compare, and install community plugins with screenshots and version info. Each listing links to docs and source for quick evaluation. Installation can be done in‑app to streamline onboarding.",
+  "relatedLinks": [
+    "https://github.com/example/plugin-catalog",
+    "https://docs.example.com/plugin-catalog"
+  ]
+}
