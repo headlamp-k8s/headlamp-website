@@ -1,0 +1,13 @@
+{
+  "id": "real-announce-3",
+  "date": "Sep 30th 2025",
+  "image": "/img/announcements/ext-api-v2.jpg",
+  "category": "announcement",
+  "title": "Extension API v2 Released",
+  "description": "Extension API v2 improves typing and lifecycle safety for plugin authors.",
+  "body": "Extension API v2 brings stronger typing and safer lifecycle hooks to improve plugin reliability and developer ergonomics. Compatibility helpers aid migration from v1, and new examples reduce onboarding time for contributors.",
+  "relatedLinks": [
+    "https://github.com/example/extension-api-v2",
+    "https://docs.example.com/extension-api-v2"
+  ]
+}

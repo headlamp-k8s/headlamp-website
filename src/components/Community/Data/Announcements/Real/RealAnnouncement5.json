@@ -1,0 +1,10 @@
+{
+  "id": "real-announce-5",
+  "date": "Jun 18th 2025",
+  "image": "/img/announcements/observability-panels.jpg",
+  "category": "announcement",
+  "title": "Inline Observability Panels",
+  "description": "See CPU/memory trends and recent events directly in workload views.",
+  "body": "Workload views now include inline observability panels for quick insight into CPU and memory trends and recent events. Quick jumps to logs and dashboards make deeper investigation fast and seamless.",
+  "relatedLinks": ["https://docs.example.com/observability-panels"]
+}

@@ -1,0 +1,10 @@
+{
+  "id": "real-announce-4",
+  "date": "Aug 12th 2025",
+  "image": "/img/announcements/cluster-profiles.jpg",
+  "category": "announcement",
+  "title": "Cluster Profiles Released",
+  "description": "Save curated views, filters, and favorites per cluster for fast context switching.",
+  "body": "Cluster Profiles let you save curated views and filters per cluster so you can switch contexts instantly. Share presets with your team to standardize workflows and reduce setup time when switching clusters.",
+  "relatedLinks": ["https://docs.example.com/cluster-profiles"]
+}
