@@ -22,6 +22,12 @@ const config: Config = {
     // Companies must be listed in alphabetical order by name
     adopters: [
       {
+        name: "KA-NABELL",
+        logo: "ka-nabell-logo.png",
+        logoDark: "ka-nabell-logo-white.png",
+        url: "https://about.ka-nabell.com/",
+      },
+      {
         name: "Microsoft",
         logo: "microsoft-logo.svg",
         logoDark: "microsoft-logo-white.svg",
