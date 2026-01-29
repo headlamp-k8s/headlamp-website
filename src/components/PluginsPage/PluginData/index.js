@@ -5,6 +5,7 @@ import headlamp_flux from './headlamp_flux.js';
 import headlamp_kaito from './headlamp_kaito.js';
 import headlamp_karpenter from './headlamp_karpenter.js';
 import headlamp_keda from './headlamp_keda.js';
+import headlamp_knative from './headlamp_knative.js';
 import headlamp_kubescape from './headlamp_kubescape.js';
 import headlamp_minikube from './headlamp_minikube.js';
 import headlamp_opencost from './headlamp_opencost.js';
@@ -20,11 +21,12 @@ const allPluginsData = [
     headlamp_kaito,
     headlamp_karpenter,
     headlamp_keda,
+    headlamp_knative,
     headlamp_kubescape,
     headlamp_minikube,
     headlamp_opencost,
     headlamp_trivy,
     inspektor_gadget,
-];
+]; 
 
 export default allPluginsData;
