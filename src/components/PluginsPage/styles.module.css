@@ -254,6 +254,11 @@
   transition: all 0.2s;
 }
 
+/* Invert white logos to black in light mode only */
+[data-theme='light'] .pluginLogo {
+  filter: invert(1);
+}
+
 @media (max-width: 600px) {
   .section {
     padding: 0rem 2rem;

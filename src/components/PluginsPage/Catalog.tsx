@@ -55,6 +55,7 @@ export function Catalog() {
                                     <img
                                         src={item.logoSrc}
                                         alt={item.logoAlt}
+                                        className={stylesPlugin.pluginLogo}
                                         style={{
                                             width: "2rem",
                                             height: "2rem",
