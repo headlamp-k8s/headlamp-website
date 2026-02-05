@@ -1,0 +1,13 @@
+{
+  "id": "real-announce-1",
+  "date": "Nov 19th 2025",
+  "image": "/img/announcements/desktop-sandbox.jpg",
+  "category": "announcement",
+  "title": "Desktop Sandbox Now Available",
+  "description": "Try Headlamp in an isolated Desktop Sandbox environment with one‑click resets.",
+  "body": "We’re shipping Desktop Sandbox so you can explore Headlamp and plugins without touching real clusters. Start clean environments or reset with a single click for reliable demos and testing. Optional sample workloads make it easy to showcase features immediately.",
+  "relatedLinks": [
+    "https://github.com/example/desktop-sandbox",
+    "https://github.com/example/plugin-samples"
+  ]
+}

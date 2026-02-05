@@ -1,0 +1,13 @@
+{
+  "id": "real-announce-7",
+  "date": "Dec 16th 2025",
+  "image": "/img/announcements/plugin-keda.jpg",
+  "category": "plugin",
+  "title": "KEDA Plugin Integration Released",
+  "description": "Easily enable event-driven autoscaling with the new KEDA plugin for Headlamp.",
+  "body": "The new KEDA plugin brings event-driven autoscaling controls directly into Headlamp. Configure triggers, scale targets, and monitor autoscaling behavior from the UI. This release simplifies the process of connecting external event sources to Kubernetes workloads.",
+  "relatedLinks": [
+    "https://github.com/example/headlamp-keda-plugin",
+    "https://keda.sh/docs/"
+  ]
+}

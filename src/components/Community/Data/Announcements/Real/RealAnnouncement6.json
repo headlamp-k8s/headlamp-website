@@ -1,0 +1,12 @@
+{
+  "id": "real-announce-6",
+  "date": "Dec 16th 2025",
+  "image": "/img/announcements/announce-6.jpg",
+  "category": "announcement",
+  "title": "Announcing Improved Announcement Sync",
+  "description": "Updater now accepts JSON posts directly and writes JSON files.",
+  "body": "The announcements updater was improved to accept JSON post files placed into the Real directory and to write new announcements as JSON files rather than JS modules. This makes content authoring simpler and safer.",
+  "relatedLinks": [
+    "https://example.com/docs/announcements"
+  ]
+}
