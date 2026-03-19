@@ -1,0 +1,106 @@
+.reveal {
+  font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 32px;
+}
+
+.reveal .slides section {
+  text-align: left;
+  padding: 40px 60px;
+  box-sizing: border-box;
+}
+
+.reveal h1,
+.reveal h2,
+.reveal h3 {
+  color: #326CE5;
+  text-transform: none;
+}
+
+.reveal h1 {
+  font-size: 1.6em;
+}
+
+.reveal h2 {
+  font-size: 1.2em;
+  border-bottom: 3px solid #326CE5;
+  padding-bottom: 0.2em;
+  margin-bottom: 0.5em;
+}
+
+.reveal p {
+  margin: 0.3em 0;
+}
+
+.reveal a {
+  color: #326CE5;
+  text-decoration: underline;
+}
+
+.reveal strong {
+  color: #1a1a1a;
+}
+
+.reveal code {
+  background: #e8eef7;
+  color: #1a1a1a;
+  padding: 0.1em 0.3em;
+  border-radius: 3px;
+  font-size: 0.85em;
+}
+
+.reveal pre {
+  width: 100%;
+  box-shadow: none;
+  margin: 0.3em 0;
+}
+
+.reveal pre code {
+  background: #f0f4fa;
+  color: #1a1a1a;
+  padding: 0.6em 0.8em;
+  border-radius: 6px;
+  border: 1px solid #d0d8e8;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.reveal table {
+  font-size: 0.65em;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.reveal table th {
+  background: #326CE5;
+  color: #fff;
+  padding: 0.4em 0.6em;
+  text-align: left;
+}
+
+.reveal table td {
+  border-bottom: 1px solid #ddd;
+  padding: 0.4em 0.6em;
+  vertical-align: top;
+}
+
+.reveal ul,
+.reveal ol {
+  font-size: 0.85em;
+  line-height: 1.5;
+  margin: 0.2em 0;
+}
+
+.reveal ul ul,
+.reveal ol ol,
+.reveal ul ol,
+.reveal ol ul {
+  font-size: 0.95em;
+}
+
+.reveal li {
+  margin-bottom: 0.2em;
+}
+
+.reveal .slide-background {
+  background: #fff;
+}
