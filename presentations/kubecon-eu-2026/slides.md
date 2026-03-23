@@ -57,11 +57,20 @@ Microsoft</small>
 
 ## Join our Slack!
 
+<div style="display: flex; align-items: center; gap: 2em;">
+<div style="flex: 1;">
+
 **First:** Join the Kubernetes Slack at [slack.k8s.io](https://slack.k8s.io)
 
 Then, join **#headlamp** channel on Kubernetes Slack
 
 Direct link also from [headlamp.dev](https://headlamp.dev) (top right)
+
+</div>
+<div style="flex: 0 0 auto;">
+<img src="slack-qr.png" style="max-height: 350px;">
+</div>
+</div>
 
 ---
 
