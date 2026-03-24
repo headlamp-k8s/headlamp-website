@@ -202,11 +202,11 @@ After scaffolding a plugin (`npx ... create my-plugin` + `npm install`), you alr
 - **15 example plugins** bundled at `node_modules/@kinvolk/headlamp-plugin/examples/` (sidebar, pod-counter, tables, details-view, change-logo, etc.)
 - **15 official plugins** bundled at `node_modules/@kinvolk/headlamp-plugin/official-plugins/` (flux, cert-manager, prometheus, keda, ai-assistant, etc.)
 
-No need to clone extra repos -- just point your AI agent at the plugin folder and describe what you want.
+No need to clone extra repos: just point your AI agent at the plugin folder and describe what you want.
 
 ---
 
-## Using AI to create plugins -- workflow
+## Using AI to create plugins: workflow
 
 1. Scaffold and install:
    ```
@@ -230,13 +230,25 @@ No need to clone extra repos -- just point your AI agent at the plugin folder an
 
 ---
 
+## Goal
+
+Use your favorite coding agent to create your plugin: point it to the plugin folder you just created.
+
+**Option 1:** Build a plugin that visualizes your favorite Kubernetes-related CNCF project (Argo, Istio, Cilium, Kyverno...)
+
+**Option 2:** Build a "Namespace Scorecard" plugin: grade each namespace on best practices like resource limits set, liveness probes configured, and pod disruption budgets in place
+
+**Option 3:** Extend an existing plugin with what you think it's missing: clone [github.com/headlamp-k8s/plugins](https://github.com/headlamp-k8s/plugins) and pick one to improve
+
+---
+
 <!-- .slide: data-background-color="#326CE5" -->
 
 <h2 style="color: #fff; border: none;">Contributing to Headlamp core</h2>
 
 ---
 
-## Contributing to Headlamp core -- setup
+## Contributing to Headlamp core: setup
 
 - Install the dependencies:
   - **git**, **node and npm** (use nvm) **LTS v22**, **golang 1.22.8**, **kubernetes** (use minikube)
@@ -252,7 +264,7 @@ No need to clone extra repos -- just point your AI agent at the plugin folder an
 
 ---
 
-## Contributing to Headlamp core -- resources
+## Contributing to Headlamp core: resources
 
 - Please check our contribution guide:
   [headlamp.dev/docs/contribution](https://headlamp.dev/docs/contribution)
