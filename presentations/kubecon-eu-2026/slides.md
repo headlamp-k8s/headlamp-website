@@ -90,6 +90,8 @@ Direct link also from [headlamp.dev](https://headlamp.dev) (top right)
 
 **Plugin Development Docs:** [headlamp.dev/docs/.../plugins/publishing](https://headlamp.dev/docs/latest/development/plugins/publishing)
 
+**Tutorials:** [headlamp.dev/docs/latest/tutorials](https://headlamp.dev/docs/latest/tutorials/)
+
 ---
 
 <!-- .slide: data-background-color="#326CE5" -->
