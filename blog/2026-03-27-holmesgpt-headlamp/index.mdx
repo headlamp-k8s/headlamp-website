@@ -1,0 +1,59 @@
+---
+title: "From Signals to Answers: Conversational Kubernetes Troubleshooting with HolmesGPT in Headlamp"
+description: Turn Kubernetes signals into clear explanations with HolmesGPT, directly inside Headlamp.
+tags: ["kubernetes", "ui", "headlamp", "troubleshooting", "application-management", "ai"]
+image: ./splash.png
+authors: ["will-case", "ashu-ghildiyial"]
+
+---
+Kubernetes does not fail quietly. When something goes wrong, signals show up everywhere. Logs, events, metrics, and status fields each tell part of the story. None of them tell the whole thing. Teams spend hours stitching these signals together. They open dashboards, run commands, and scroll through logs looking for clues. Often, the data they need is already there. The hard part is turning those signals into clear answers.
+
+This is the gap Headlamp fills with HolmesGPT by centralizing data and context to get answers in a familiar environment.
+
+<!-- truncate -->
+
+## The Real Problem Is Not Missing Data
+
+Most Kubernetes teams are not short on data. Modern clusters generate a steady stream of signals about what is happening across the system. On paper, everything needed to diagnose an issue already exists.
+
+**The real problem is making sense of it.**
+
+Understanding why a rollout is stuck or a pod keeps restarting takes context and time. Humans do this by testing one idea at a time. We gather signals, form a hypothesis, then move to the next. Holmes can do this work in parallel. It looks across related resources and controller behavior at once, finding answers faster than a single person can.
+
+Kubernetes problems end up feeling harder than they should be with multiple layers of friction.
+
+## What HolmesGPT Brings to Kubernetes
+
+HolmesGPT is designed to reason about Kubernetes behavior, not just report state. It looks at real cluster signals together, including logs, events, and resources. It understands how failures propagate and how controller logic affects outcomes.
+
+Instead of listing symptoms, HolmesGPT focuses on causes. Instead of showing raw output, it explains what is happening and how to fix it. This shifts troubleshooting from guesswork to understanding.
+
+## Why Headlamp Is the Right Place for HolmesGPT
+
+Headlamp is where Kubernetes work already happens. It is where teams explore clusters, inspect workloads, and notice when something looks wrong. This is exactly the place where signals need to be turned into answers. Many teams try to close this gap by adding more tools. Another dashboard. Another alerting system. Another surface to check during an incident. Each one adds value, but each one also adds friction.
+
+The HolmesGPT integration takes a different approach. Instead of adding another tool, it brings reasoning into an existing workflow. Headlamp does not become something new to learn. It becomes easier to use because it builds on an environment teams already know. When insight lives in the same place as management, it gets used. Context stays intact. Teams move more quickly from questions to action.
+
+**Watch the demo:**
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3jBSrGR9VEA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+## From Signals to Understanding
+
+Troubleshooting in Headlamp feels different because the explanation lives in the same place as the investigation. HolmesGPT works in context, alongside the workloads, namespaces, and controllers you are already viewing. It explains how the resources on screen relate to each other, without sending you to another tool.
+
+Traditional observability shows what is happening, but it rarely explains why. A pod restart loop might come from a bad configuration, a missing secret, or a failure elsewhere in the system. Logs alone cannot tell you which one matters. Events add clues, but they still only show part of the story.
+
+That context is what changes the troubleshooting experience. Patterns that are hard to spot in raw output become clear when they are tied directly to Kubernetes objects. Instead of stitching clues together across tools, teams see explanations next to the problem they are trying to understand.
+
+## Insight That Fits How Teams Work
+
+Kubernetes is rarely owned by one role. Developers focus on application behavior. Operators focus on stability. Platform teams look for patterns and consistency across clusters. HolmesGPT helps create a shared understanding across those roles. The same explanation can help a developer understand why a rollout failed and help an operator confirm a broader issue. The language is clear, the context is shared, and the insight is grounded in real cluster state.
+
+Just as important, this insight fits into existing workflows. Teams do not need to change how they work or learn a new system. When understanding appears at the right moment and in the same place as investigation, it gets used. This reduces handoffs, avoids miscommunication, and helps teams move from discussion to action faster.
+
+## Clear Answers When They Matter Most
+
+HolmesGPT in Headlamp turns scattered signals into clear explanations, right where you already investigate. You keep context, move faster, and make decisions with more confidence.
+
+If you want to try it, open Headlamp, enable the AI Assistant, and connect HolmesGPT. To add the Holmes agent to your cluster, follow the [setup instructions](https://github.com/headlamp-k8s/plugins/tree/main/ai-assistant#adding-holmes-agent-to-your-cluster). The next time an alert fires, you can go from signals to answers without leaving the UI.
