@@ -1,0 +1,14 @@
+{
+  "name": "headlamp-contribfest-kubecon-eu-2026",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Headlamp Contribfest slides for KubeCon EU 2026, Amsterdam",
+  "scripts": {
+    "start": "reveal-md slides.md",
+    "build": "reveal-md slides.md --static _site",
+    "pdf": "reveal-md slides.md --print slides.pdf"
+  },
+  "devDependencies": {
+    "reveal-md": "^6"
+  }
+}
