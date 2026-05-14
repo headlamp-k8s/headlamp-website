@@ -1,0 +1,86 @@
+// created via add-plugin.js
+    const headlamp_kubevirt = {
+    "version": "0.2.2",
+    "digest": "2026-04-28T10:00:00Z",
+    "name": "headlamp_kubevirt",
+    "displayName": "KubeVirt",
+    "createdAt": "2025-03-23T00:00:00Z",
+    "description": "A comprehensive Headlamp plugin for managing KubeVirt virtual machines in Kubernetes",
+    "license": "Apache-2.0",
+    "homeURL": "https://github.com/naval-group/headlamp-kubevirt",
+    "logoURL": "https://raw.githubusercontent.com/kubevirt/community/main/logo/KubeVirt_icon.png",
+    "containsSecurityUpdates": true,
+    "operator": false,
+    "prerelease": false,
+    "keywords": [
+        "headlamp",
+        "kubevirt",
+        "kubernetes",
+        "virtualization",
+        "virtual-machine",
+        "vnc",
+        "vm-templates",
+        "forensics",
+        "s3"
+    ],
+    "provider": {
+        "name": "Naval Group"
+    },
+    "maintainers": [
+        {
+            "name": "Alexandre Knecht",
+            "email": "knecht.alexandre@gmail.com"
+        },
+        {
+            "name": "Aymeric Deliencourt",
+            "email": "aymeric.deliencourt@aydev.fr"
+        }
+    ],
+    "links": [
+        {
+            "name": "GitHub",
+            "url": "https://github.com/naval-group/headlamp-kubevirt"
+        },
+        {
+            "name": "Image Catalog Documentation",
+            "url": "https://github.com/naval-group/headlamp-kubevirt/blob/main/docs/image-catalog/README.md"
+        }
+    ],
+    "screenshots": [
+        {
+            "title": "Overview Dashboard",
+            "url": "https://raw.githubusercontent.com/naval-group/headlamp-kubevirt/main/screenshots/overview-dashboard.png"
+        },
+        {
+            "title": "VM Details",
+            "url": "https://raw.githubusercontent.com/naval-group/headlamp-kubevirt/main/screenshots/vm-details.png"
+        },
+        {
+            "title": "Serial Console",
+            "url": "https://raw.githubusercontent.com/naval-group/headlamp-kubevirt/main/screenshots/serial-console.png"
+        },
+        {
+            "title": "VNC Console",
+            "url": "https://raw.githubusercontent.com/naval-group/headlamp-kubevirt/main/screenshots/vnc-console.png"
+        },
+        {
+            "title": "Create VM",
+            "url": "https://raw.githubusercontent.com/naval-group/headlamp-kubevirt/main/screenshots/create-vm.png"
+        },
+        {
+            "title": "Settings",
+            "url": "https://raw.githubusercontent.com/naval-group/headlamp-kubevirt/main/screenshots/settings.png"
+        }
+    ],
+    "install": "## Desktop Installation\n\nDownload the latest release tarball and extract to your Headlamp plugins directory:\n\n```bash\ntar -xzf headlamp-kubevirt-*.tar.gz -C ~/.config/Headlamp/plugins/\n```\n\n## In-Cluster Installation\n\nAdd as an init container to your Headlamp deployment:\n\n```yaml\ninitContainers:\n  - name: headlamp-kubevirt\n    image: ghcr.io/naval-group/headlamp-kubevirt:latest\n    command: [\"/bin/sh\", \"-c\"]\n    args: [\"cp -r /plugins/kubevirt /headlamp-plugins/\"]\n    volumeMounts:\n      - name: headlamp-plugins\n        mountPath: /headlamp-plugins\n```\n",
+    "annotations": {
+        "headlamp/plugin/archive-url": "https://github.com/naval-group/headlamp-kubevirt/releases/download/v0.2.2/headlamp-kubevirt-0.2.2.tar.gz",
+        "headlamp/plugin/archive-checksum": "sha256:69416eea8c26d13e4379318a218503faab4d637914f462cc4fe90bdc19b0247e",
+        "headlamp/plugin/version-compat": ">=0.24.0",
+        "headlamp/plugin/distro-compat": "in-cluster,desktop,docker-desktop,web"
+    },
+    "githubURL": "https://github.com/naval-group/headlamp-kubevirt/blob/main"
+};
+
+    export default headlamp_kubevirt;
+    
