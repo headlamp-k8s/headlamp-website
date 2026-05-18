@@ -1,0 +1,49 @@
+---
+title: "Building the Strimzi plugin: an LFX Mentorship journey"
+description: "What it was like to finish and upstream the Strimzi plugin for Headlamp during an LFX Mentorship: picking the project, debugging the plugin loader, learning from code review, and advice for future mentees."
+authors: ["krrish-sehgal"]
+---
+
+[Strimzi](https://strimzi.io/) runs Apache Kafka on Kubernetes through a set of Custom Resources, and [Headlamp](https://headlamp.dev/) is a web and desktop dashboard for Kubernetes. Over a Linux Foundation (LFX) Mentorship cycle, I worked on the [Strimzi plugin for Headlamp](https://github.com/headlamp-k8s/plugins/tree/main/strimzi): a plugin that lets cluster operators inspect, search, and edit Strimzi `Kafka`, `KafkaTopic`, `KafkaUser`, `KafkaConnect`, and `KafkaConnector` resources from the Headlamp UI. This post is the day-to-day story of that mentorship, written for whoever picks up the next slot.
+
+<!--truncate-->
+
+A lot of what shipped came out of not knowing the answer up front. The work was less "implement a known design" and more "discover what the design should be while satisfying an upstream review bar."
+
+## Picking the project
+
+The original Strimzi Headlamp plugin had been started by Angelo Cesaro some time earlier, but it sat outside the official `headlamp-k8s/plugins` monorepo. The mentorship task, at first glance, was "finish it and merge it upstream." In practice, "finish" turned into:
+
+- Re-reading the existing code with fresh eyes and writing down what was missing for upstream quality (tests, accessibility, theme support, docs).
+- Mapping the Strimzi CRD surface, deciding what to ship first (`Kafka`, `KafkaTopic`, `KafkaUser`, then `KafkaConnect` and `KafkaConnector`) and what to defer (`KafkaMirrorMaker2`, `KafkaBridge`, deeper Connect UX).
+- Aligning with both the Strimzi and Headlamp maintainers on conventions: how Headlamp wants resources rendered, how Strimzi wants users to discover credentials, and how the existing PR review culture works.
+
+The lesson: a "small" mentorship project frequently expands when you treat the upstream review bar as the real definition of done.
+
+## The first time Strimzi showed up in Headlamp
+
+The single most rewarding moment was the day the Strimzi views first showed up in Headlamp, and then immediately disappeared on the next build because of an incorrect UMD external mapping. That bug taught me more about Headlamp's plugin loader than any amount of reading docs: plugins are loaded as UMD bundles whose external mappings have to match exactly the names the host exposes on `window.pluginLib`, and a single extra `lib/` segment in an import path is enough to break the load silently. Diffing the working Flux plugin against my failing Strimzi plugin made the fix obvious. It probably sounds trivial; it was the single most useful debugging exercise of the whole mentorship.
+
+## Code review as a collaboration tool
+
+[PR #549](https://github.com/headlamp-k8s/plugins/pull/549) attracted review comments from GitHub Copilot, the original plugin author, and the Headlamp maintainers. Some I agreed with on first reading (the silent clipboard failure, the over-broad RBAC in a sample manifest); others forced a real conversation about scope (do we ship our own deploy YAMLs in this PR or not? where does CI for a single plugin in a monorepo belong?). The thing I underestimated was how much quality came from those threads. Bugs that I would never have caught alone, such as `if (value)` dropping `0`, brittle dark-mode detection by hex string, and `parseInt` returning `NaN` on an empty input, all surfaced in review.
+
+A practical tip: running each reviewer's suggestion through "what would this look like as a separate, atomic commit?" keeps the PR's history reviewable and makes it trivial to drop or amend a single change.
+
+## Two soft skills that paid off
+
+- **Asking earlier than you think you should.** The Headlamp Slack and weekly mentor sync turned a week of guessing into thirty-minute conversations on more than one occasion.
+- **Writing things down.** Demo scripts, release notes, this very blog post: all of them force you to revisit your own assumptions and frequently turn up issues no test caught.
+
+## What I'd tell a future mentee
+
+- The first month is mostly reading. That's fine.
+- Get a working build to deploy into Headlamp before you write a single feature. You will save weeks of "did this even load?"
+- Atomic commits with a body explaining why. The Headlamp review culture takes commit hygiene seriously and your PR will move faster.
+- Storybook stories are not optional polish. For a UI plugin, they are the only way reviewers can sanity-check your component without a live Kafka cluster.
+
+## Acknowledgements
+
+Thanks to Angelo Cesaro for the original Strimzi Headlamp plugin that this work refactors and integrates upstream; to the Headlamp and Strimzi maintainers for thorough review and ongoing guidance; to my LFX mentors for sponsoring and steering the project; and to the LFX Mentorship and CNCF Mentoring programs for making this kind of structured open source contribution possible.
+
+If you would like to do something like this yourself, watch the [CNCF Mentoring](https://github.com/cncf/mentoring) repository for upcoming cycles.
