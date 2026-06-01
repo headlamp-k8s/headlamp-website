@@ -293,10 +293,8 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright ${new Date().getFullYear()} The Kubernetes Authors<br />
-      The Linux Foundation® (TLF) has registered trademarks and uses trademarks.<br />
-      For a list of TLF trademarks, see <a href="https://www.linuxfoundation.org/legal/trademark-usage" target="_blank">
-      Trademark Usage</a>`,
+      copyright: `Copyright Headlamp a Series of LF Projects, LLC<br />
+      For website terms of use, trademark policy and other project policies please see <a href="https://lfprojects.org/policies/" target="_blank">https://lfprojects.org/policies/</a>.`,
     },
     prism: {
       additionalLanguages: ["bash", "yaml", "docker"],
