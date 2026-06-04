@@ -28,7 +28,7 @@ const downloadInfo: Record<Platform, DownloadInfo> = {
   win: {
     label: "Download for Windows",
     fallbackDownloadLink:
-      "/docs/latest/installation/desktop/windows-installation",
+      "/docs/latest/installation/desktop/win-installation",
     script: "winget install headlamp",
   },
   mac: {
@@ -69,9 +69,23 @@ const usePlatform = (): Platform => {
 };
 
 const latestReleasePromise = fetch(
-  "https://api.github.com/repos/kubernetes-sigs/headlamp/releases/latest"
-).then((response) => response.json());
+  'https://api.github.com/repos/kubernetes-sigs/headlamp/releases?per_page=10',
+)
+  .then((response) => response.json())
+  .then((releases) => {
+    if (!releases && !Array.isArray(releases)) return null;
 
+    return releases.find((release: unknown) => {
+      // Find a release for headlamp, which will have a tag name like v1.2.3
+      return (
+        release &&
+        typeof release === 'object' &&
+        'tag_name' in release &&
+        typeof release.tag_name === 'string' &&
+        /^v\d+\.\d+\.\d+$/.test(release.tag_name)
+      );
+    });
+  });
 const useLatestRelease = () => {
   const [latestRelease, setLatestRelease] = useState(null);
 
