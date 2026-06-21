@@ -133,3 +133,7 @@ figcaption {
   font-style: italic;
   opacity: 0.8;
 }
+
+.theme-code-block:hover div[class*="buttonGroup"] button {
+  opacity: 1;
+}
