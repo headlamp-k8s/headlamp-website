@@ -180,7 +180,7 @@ const config: Config = {
     announcementBar: {
       id: 'support_us',
       content:
-        'Important: Warnings from Mac and Windows when running the Headlamp desktop apps. <a target="_blank" href="/docs/latest/installation/desktop/">Read more about unsigned apps</a>',
+        'Important: Warnings from Windows when running the Headlamp desktop apps. <a target="_blank" href="/docs/latest/installation/desktop/">Read more about unsigned apps</a>',
       backgroundColor: '#f2e600',
       textColor: '#070f7f',
       isCloseable: false,

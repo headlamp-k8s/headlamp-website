@@ -212,7 +212,7 @@ function DownloadSection({ forcePlatform }: { forcePlatform?: Platform }) {
           </span>
           <strong>Important:</strong>{" "}
           <span>
-            On warnings from Mac and Windows{" "}
+            On warnings from Windows{" "}
             <Link
               to="/docs/latest/installation/desktop/"
               target="_blank"
