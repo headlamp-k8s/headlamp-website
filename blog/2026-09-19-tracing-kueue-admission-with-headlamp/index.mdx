@@ -113,6 +113,10 @@ For admission troubleshooting, the most important condition types are `QuotaRese
 - `QuotaReserved=False` with a reason such as `Pending` means Kueue has not reserved quota. The
   condition message explains what prevented the reservation.
 
+- `QuotaReserved=True` without `Admitted=True` means quota is reserved, but one or more admission
+  checks may still be pending. Inspect the Workload's admission checks and messages before moving to
+  Pod scheduling.
+
 - An `Inadmissible` status means the Workload currently cannot fit the available queue
   configuration. A missing covered resource, unsuitable ResourceFlavor, stopped queue, or admission
   check can all lead you here.
@@ -247,7 +251,7 @@ Kueue has completed its part of the decision. Continue in Headlamp's standard Ku
 
 1. Select a `Pending` Pod and read its **Events** section.
 
-At this stage, look for scheduler concerns such as insufficient node capacity,
+At this stage, look for Pod startup or scheduling concerns such as insufficient node capacity,
 [node affinity](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/),
 [taints and tolerations](https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/),
 topology constraints, persistent-volume binding, or image-pull failures.
