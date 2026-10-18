@@ -5,12 +5,14 @@ import headlamp_flux from './headlamp_flux.js';
 import headlamp_kaito from './headlamp_kaito.js';
 import headlamp_karpenter from './headlamp_karpenter.js';
 import headlamp_keda from './headlamp_keda.js';
+import headlamp_kmesh from './headlamp_kmesh.js';
 import headlamp_knative from './headlamp_knative.js';
 import headlamp_kubescape from './headlamp_kubescape.js';
 import headlamp_kubevirt from './headlamp_kubevirt.js';
 import headlamp_minikube from './headlamp_minikube.js';
 import headlamp_opencost from './headlamp_opencost.js';
 import headlamp_trivy from './headlamp_trivy.js';
+import headlamp_volcano from './headlamp_volcano.js';
 import inspektor_gadget from './inspektor_gadget.js';
 
 
@@ -22,12 +24,14 @@ const allPluginsData = [
     headlamp_kaito,
     headlamp_karpenter,
     headlamp_keda,
+    headlamp_kmesh,
     headlamp_knative,
     headlamp_kubescape,
     headlamp_kubevirt,
     headlamp_minikube,
     headlamp_opencost,
     headlamp_trivy,
+    headlamp_volcano,
     inspektor_gadget,
 ]; 
 
