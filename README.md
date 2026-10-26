@@ -61,7 +61,7 @@ $ ./link-docs.sh
 To add plugins to the featured plugins list on the plugins page:
 
 - Be sure to use the link from the github page view of the plugin YAML file
-  ex. https://github.com/headlamp-k8s/plugins/blob/main/example-change-logo/artifacthub-pkg.yml
+  ex. https://github.com/headlamp-k8s/plugins/blob/main/example-change-logo/0.0.1/artifacthub-pkg.yml
 
 ```
 npm run add-plugin <link-to-plugin-yaml>
@@ -81,7 +81,7 @@ This will download the plugin YAML file, parse it, and add it to the list of plu
 
 You can use [Vale](https://vale.sh/) linter to check for common mistakes, spelling errors and validate with [Microsoft Writing Style Guide](https://learn.microsoft.com/en-us/style-guide/welcome/).
 
-To get started you need to [install vale](https://vale.sh/docs/vale-cli/installation/).
+To get started you need to [install vale](https://docs.vale.sh/topics/installation).
 
 Then run this command to check a single document
 
