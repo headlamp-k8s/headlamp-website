@@ -1,5 +1,6 @@
 # Dependencies
 /node_modules
+presentations/*/node_modules
 
 # Production
 /build
@@ -21,3 +22,6 @@ yarn-error.log*
 
 /headlamp
 docs/*
+
+# Built presentations (generated from presentations/*/)
+static/presentations
