@@ -12,6 +12,7 @@ import headlamp_minikube from './headlamp_minikube.js';
 import headlamp_opencost from './headlamp_opencost.js';
 import headlamp_trivy from './headlamp_trivy.js';
 import inspektor_gadget from './inspektor_gadget.js';
+import kubebuddy_headlamp_plugin from './kubebuddy_headlamp_plugin.js';
 
 
 const allPluginsData = [
@@ -29,6 +30,7 @@ const allPluginsData = [
     headlamp_opencost,
     headlamp_trivy,
     inspektor_gadget,
+    kubebuddy_headlamp_plugin,
 ]; 
 
 export default allPluginsData;
