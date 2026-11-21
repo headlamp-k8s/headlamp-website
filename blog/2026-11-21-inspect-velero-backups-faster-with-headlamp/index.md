@@ -2,13 +2,13 @@
 title: 'Inspect Velero backups faster with Headlamp'
 description: See Velero schedules, backups, restores, and storage in one Headlamp view.
 tags: ['kubernetes', 'headlamp', 'velero', 'backup']
-image: ./coverage.png
+image: ./overview.png
 authors: ['pragati-verma']
 ---
 
 Velero copies a Kubernetes cluster into a bucket and can restore that copy back into the cluster. A backup takes Deployments, Pods, ConfigMaps, and disks. The bucket is a Backup Storage Location.
 
-![Velero stores a backup in a bucket and can restore it to the cluster.](https://hackmd.io/_uploads/Bkywj_6Afl.png)
+![Velero stores a backup in a bucket and can restore it to the cluster.](./what-velero-does.png)
 
 Velero stores a backup in a bucket and can restore it to the cluster.
 
@@ -18,7 +18,7 @@ Headlamp is an extensible Kubernetes web UI. The Velero plugin shows those Sched
 
 ## Why do we need Velero
 
-![A backup is the copy you use after a workload or a namespace is gone. A restore brings the objects back. It does not promise that the application stays up the whole time.](https://hackmd.io/_uploads/Hke_jupAzx.png)
+![A backup is the copy you use after a workload or a namespace is gone. A restore brings the objects back. It does not promise that the application stays up the whole time.](./why-velero.png)
 
 A backup is the copy you use after a workload or a namespace is gone. A restore brings the objects back. It does not promise that the application stays up the whole time.
 
@@ -92,7 +92,7 @@ Velero → Overview counts Backups and Restores that completed, failed, or are s
 
 This is the page to open when you want one picture of backup health, rather than a pass through every list.
 
-![Velero overview in Headlamp](https://hackmd.io/_uploads/rkst8OTCMe.png)
+![Velero overview in Headlamp](./overview.png)
 
 ## Map view: schedules, backups, restores, and storage in one place
 
@@ -100,9 +100,9 @@ The map view shows how Velero resources are connected. Instead of inspecting eac
 
 A line labeled creates joins a Schedule to a Backup. A line labeled stores joins a Backup or a Schedule to its storage location. A line labeled restores joins a Backup to a Restore. Green means success. Orange means a warning, such as a paused Schedule or a backup that is still running. A red exclamation mark means the object failed, or the storage location is Unavailable.
 
-![Schedules daily and show-paused-daily in the Velero namespace](https://hackmd.io/_uploads/B1biLdpAzl.png)
+![Schedules daily and show-paused-daily in the Velero namespace](./map-namespace.png)
 
-![Schedule daily stores its backups in the default location. The red marks are backups that failed.](https://hackmd.io/_uploads/r1ZjU_TCfe.png)
+![Schedule daily stores its backups in the default location. The red marks are backups that failed.](./map-daily.png)
 
 Schedule daily stores its backups in the default location. The red marks are backups that failed.
 
