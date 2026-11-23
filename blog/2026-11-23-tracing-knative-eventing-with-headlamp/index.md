@@ -211,3 +211,56 @@ fixes there:
 
 These bugs affect anyone who reads Knative's metrics, with or without Headlamp. Some gaps remain. For
 example, no Knative component counts events sent to a dead letter sink yet.
+
+## How Headlamp gets the data
+
+The plugin runs inside Headlamp, in your browser or the desktop app. It asks the Headlamp server for
+Knative resources, and the server passes each request to the Kubernetes API with your own
+permissions. Headlamp watches the lists, so new or changed resources show up without a refresh.
+Knative's controllers keep each resource's status up to date, and that status is what the Ready
+columns and the Map's badges show. When you click Restart, the request takes the same path, as a
+patch to the Service's Deployments.
+
+![Workflow: Headlamp with the Knative plugin talks to the Headlamp server, which lists, watches and patches through the Kubernetes API; Knative controllers update the status of the Knative resources](./how-data-flows.png)
+
+*Figure 3. How Headlamp gets the data.*
+
+The charts take one more step. Headlamp's Prometheus plugin sends its queries through the same
+Kubernetes API to your Prometheus, which scrapes the metrics that Knative's pods report.
+
+## Try it
+
+The Knative plugin in Headlamp's Plugin Catalog is version 0.4.0-beta. It has the Broker and Trigger
+lists and pages, the Channel and Subscription lists, the rolling restart and most of the Serving
+fixes. The Channel and Subscription pages, Sources, the Kafka and NATS views, the Map, the Broker and
+Trigger forms and the charts are merged and ship in the next release. The charts also need the next
+release of Headlamp's Prometheus plugin, and a Prometheus that scrapes Knative's metrics, as the
+plugin's [README](https://github.com/headlamp-k8s/plugins/tree/main/knative#prometheus-metrics-integration)
+describes.
+
+1. Install the [Headlamp desktop app](https://headlamp.dev/docs/latest/installation/desktop/),
+   version 0.44 or later.
+1. Open the Plugin Catalog in the sidebar and install the Knative plugin. Then reload Headlamp, from
+   the notification or with Navigation > Reload.
+1. Connect to a cluster that runs Knative, and open Knative in the sidebar.
+
+Headlamp running in a cluster loads plugins another way, described in
+[plugin management](https://headlamp.dev/docs/latest/installation/in-cluster/#plugin-management).
+
+To try the merged parts now, build the Knative and Prometheus plugins from main and install them by
+hand, as
+[Building and Shipping Plugins](https://headlamp.dev/docs/latest/development/plugins/building/#manual-installation)
+describes.
+
+The screenshots were taken on a local [kind](https://kind.sigs.k8s.io/) cluster set up with the
+plugin's [test files](https://github.com/headlamp-k8s/plugins/tree/main/knative/test-files), which
+create healthy and broken versions of the objects shown here.
+
+If something is confusing or missing, please open an issue in the
+[Headlamp plugins repository](https://github.com/headlamp-k8s/plugins).
+
+## Thanks
+
+Thank you to my mentors, [René Dudfield](https://github.com/illume) and
+[Kahiro](https://github.com/kahirokunn), for careful reviews and for every question that made the
+code simpler.
