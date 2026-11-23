@@ -152,3 +152,62 @@ failures are stacked on top of the successes, so neither hides the other.
 
 The queue chart shows when a subscriber falls behind. When I sent 100 events through Kafka to a
 subscriber that never answers, the queue went down only as each event ran out of retries.
+
+## When an event goes missing
+
+This is the order I check things in when an event doesn't arrive:
+
+```mermaid
+%%{init: {"themeVariables": {"lineColor": "#8b949e"}}}%%
+flowchart TD
+    start(["An event never reached my application"]) --> map{"Does the Map show a path from the Source to the application?"}
+    map -- "No" --> setup["Open the object where the path breaks and read its status and reason"]
+    map -- "Yes" --> badge{"Does any object on the path have a badge?"}
+    badge -- "Yes" --> setup
+    badge -- "No" --> charts{"What do the Delivery charts show?"}
+    charts -- "Failures" --> dls["Check the subscriber, and the dead letter sink in the Trigger's YAML or on the Subscription page"]
+    charts -- "Nothing" --> filter["Check that the Source is sending and Prometheus scrapes Knative, then compare the Trigger's filter with the Source's event types"]
+```
+
+*Figure 2. Where to look, in order, when an event goes missing.*
+
+The broken Trigger from earlier gets caught at the first two checks: it has a badge, and its page
+names the missing Service. If everything looks fine but the charts show failures, the subscriber
+isn't accepting the events. It answers with errors, or doesn't answer in time. If the Trigger has a
+dead letter sink, `status.deadLetterSinkUri` in its YAML shows where those events are sent after
+their retries. If the charts show nothing at all, maybe no event got past the Trigger's filter, or
+Prometheus isn't scraping Knative. One of the Knative metrics bugs listed below can also leave
+deliveries out. Check that the Source is sending, then compare the filter with the event types on
+the Source's page.
+
+## Serving got safer too
+
+Before Eventing, I fixed the Serving problems people run into first. Restart used to delete a
+Service's Pods. Now it rolls them out the way `kubectl rollout restart` does, so traffic keeps
+flowing, and the page follows the rollout until it finishes or fails. This needs Knative 1.21 or
+later.
+
+A permission error or a network blip no longer makes the plugin think Knative isn't installed and
+hide its pages. Clearing an autoscaling setting now clears it. The check for Knative used to leave a
+connection open every time it ran, so six page visits left nineteen connections behind. That fix
+ships in the next release.
+
+## Fixing Knative's own numbers
+
+Before trusting any chart, I tested it against a known amount of traffic. Some numbers were wrong:
+fifty events through a Broker showed up as a hundred. The bugs were in Knative itself, so I sent the
+fixes there:
+
+- [knative/eventing#9606](https://github.com/knative/eventing/pull/9606): the Broker's ingress and
+  filter counted every request twice.
+- [knative/eventing#9608](https://github.com/knative/eventing/pull/9608): in Knative 1.24,
+  PingSource and ApiServerSource metrics stopped saying which Source sent an event.
+- [knative/eventing#9610](https://github.com/knative/eventing/pull/9610): the PingSource adapter
+  announced its metrics on one port and served them on another, so Prometheus never scraped it.
+- [knative/eventing#9612](https://github.com/knative/eventing/pull/9612): an InMemoryChannel counted
+  a failed delivery as a success when the dead letter sink took the event.
+- [knative-extensions/eventing-kafka-broker#4870](https://github.com/knative-extensions/eventing-kafka-broker/pull/4870):
+  the Kafka dispatcher left deliveries that got no answer at all out of its metrics.
+
+These bugs affect anyone who reads Knative's metrics, with or without Headlamp. Some gaps remain. For
+example, no Knative component counts events sent to a dead letter sink yet.
