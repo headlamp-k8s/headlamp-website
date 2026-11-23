@@ -88,3 +88,18 @@ go. These pages have no edit or delete buttons. Knative would undo any change, a
 hand can break the Broker or Trigger that owns it.
 
 ![Details of a Subscription that Knative created for the Trigger catch-all, showing the InMemoryChannel it reads from, the Broker filter address it sends to, and the Broker it replies to](./trigger-subscription.png)
+
+## Sources
+
+The Sources list puts every kind of Source in one table. That includes Sources from other projects,
+which the plugin finds through the `duck.knative.dev/source=true` label on their
+CustomResourceDefinitions. The PingSource missing-sink, for example, is marked Not Ready because
+its sink Service doesn't exist.
+
+A Source's page shows its sink, the address Knative resolved it to, and the settings for its kind,
+such as a PingSource's schedule or the resources an ApiServerSource watches.
+
+It also lists the type and source of each event the Source sends. Those are the values a Trigger's
+filter has to match, so you don't have to guess what to put in the filter.
+
+![The CloudEvent attributes of the ApiServerSource k8s-events: the event types dev.knative.apiserver.resource.add, delete and update, each from the API server's address](./source-event-types.png)
