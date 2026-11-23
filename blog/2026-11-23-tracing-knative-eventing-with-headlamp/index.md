@@ -103,3 +103,14 @@ It also lists the type and source of each event the Source sends. Those are the 
 filter has to match, so you don't have to guess what to put in the filter.
 
 ![The CloudEvent attributes of the ApiServerSource k8s-events: the event types dev.knative.apiserver.resource.add, delete and update, each from the API server's address](./source-event-types.png)
+
+## Kafka and NATS channels
+
+Knative can carry events over Apache Kafka or NATS JetStream instead of memory. The Channel
+Implementations view shows every kind of channel in one table, with the Broker or Channel that
+created each one.
+
+![The Channel Implementations list, with two KafkaChannels, a NatsJetStreamChannel and four InMemoryChannels, their addresses, how many subscribers each has, and the Broker or Channel that owns some of them](./channel-implementations.png)
+
+A KafkaChannel's page shows how many times a delivery is retried, how long it waits between tries,
+the dead letter sink, and the Kafka settings.
