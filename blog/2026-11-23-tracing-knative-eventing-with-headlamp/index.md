@@ -114,3 +114,25 @@ created each one.
 
 A KafkaChannel's page shows how many times a delivery is retried, how long it waits between tries,
 the dead letter sink, and the Kafka settings.
+
+## The whole path on the Map
+
+Headlamp's Map draws resources and the links between them, and the plugin adds Eventing to it.
+Sources point to their Broker, the Broker to its Triggers, and each Trigger to its subscriber.
+Anything that isn't ready gets a badge, so the broken Trigger from earlier shows up as an error
+right on the Map.
+
+![Headlamp Map with the PingSource heartbeat sending to the Broker default, which fans out to five Triggers; the Trigger dangling-subscriber has an error badge and the Trigger broker-ref has a warning badge](./eventing-map.png)
+
+Filter the Map to one namespace and it shows the Eventing objects in it. Objects that are linked to
+each other share a stacked card, and cards that need attention carry a badge. A subscriber or sink
+given only as a URI gets no edge, and Sources and channels of kinds the plugin doesn't know, such as
+RabbitmqSource, aren't drawn. In both cases the path on the Map stops early even though nothing is
+wrong.
+
+Turn on Eventing Internals in the Map's filter and select the card for the Broker default, and the
+Map draws Figure 1 with your real objects: the Channel behind the Broker and the Subscription
+Knative made for each Trigger. The broken Trigger has none, because Knative only creates the
+Subscription after it finds the subscriber.
+
+![Headlamp Map with Eventing Internals shown for the Broker default: the PingSource heartbeat sends to the Broker, and the InMemoryChannel default-kne-trigger leads to the Subscriptions Knative created for the Triggers order-created, catch-all and uri-subscriber; the Trigger dangling-subscriber has no Subscription and carries an error badge](./eventing-map-internals.png)
