@@ -9,6 +9,7 @@ import headlamp_knative from './headlamp_knative.js';
 import headlamp_kubescape from './headlamp_kubescape.js';
 import headlamp_kubevirt from './headlamp_kubevirt.js';
 import headlamp_minikube from './headlamp_minikube.js';
+import headlamp_node_readiness_controller from './headlamp_node_readiness_controller.js';
 import headlamp_opencost from './headlamp_opencost.js';
 import headlamp_trivy from './headlamp_trivy.js';
 import inspektor_gadget from './inspektor_gadget.js';
@@ -26,6 +27,7 @@ const allPluginsData = [
     headlamp_kubescape,
     headlamp_kubevirt,
     headlamp_minikube,
+    headlamp_node_readiness_controller,
     headlamp_opencost,
     headlamp_trivy,
     inspektor_gadget,
