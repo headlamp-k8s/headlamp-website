@@ -10,7 +10,8 @@ if [ ! -e "$TARGET" ]; then
     git clone --depth 1 https://github.com/kubernetes-sigs/headlamp.git ./headlamp
   elif [ -d "./headlamp/.git" ]; then
     echo "Updating headlamp/docs repository..."
-    git -C ./headlamp pull
+    git -C ./headlamp fetch --depth 1 origin main
+    git -C ./headlamp reset --hard origin/main
   fi
   make docs -C ./headlamp
 
