@@ -136,3 +136,19 @@ Knative made for each Trigger. The broken Trigger has none, because Knative only
 Subscription after it finds the subscriber.
 
 ![Headlamp Map with Eventing Internals shown for the Broker default: the PingSource heartbeat sends to the Broker, and the InMemoryChannel default-kne-trigger leads to the Subscriptions Knative created for the Triggers order-created, catch-all and uri-subscriber; the Trigger dangling-subscriber has no Subscription and carries an error badge](./eventing-map-internals.png)
+
+## Did the events get through?
+
+A Trigger can be Ready while every event sent to it fails. To see what's getting through, the plugin
+works with Headlamp's Prometheus plugin and adds charts to the Eventing pages: deliveries that
+succeeded or failed, how long they took, events waiting in a queue, and how busy Knative's
+controllers are. Which charts a page has depends on the metrics Knative reports for that kind. A
+PingSource, for example, has only the controller charts.
+
+Here, one of the Broker's Triggers succeeds on every event and another fails on every event. The
+failures are stacked on top of the successes, so neither hides the other.
+
+![Deliveries chart for the Broker default, with a green band for succeeded deliveries and a red band for failed ones stacked on top](./broker-deliveries.png)
+
+The queue chart shows when a subscriber falls behind. When I sent 100 events through Kafka to a
+subscriber that never answers, the queue went down only as each event ran out of retries.
