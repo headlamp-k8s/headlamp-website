@@ -76,3 +76,15 @@ other. The Trigger form lets you pick the Broker and the subscriber by name, and
 disabled until the settings pass Knative's own checks.
 
 ![The Form tab of Create Trigger: the Trigger order-shipped in the namespace knative-eventing-test takes events from the Broker default, lets through events of type dev.example.order.shipped, and sends them to the Kubernetes Service event-display](./trigger-create-form.png)
+
+## Channels and Subscriptions
+
+A Channel's page lists its Subscriptions and whether each one is ready, so you can see which
+subscriber is failing.
+
+Remember the objects I had never created? Each Subscription that Knative makes for a Trigger says
+which Trigger owns it, along with the Channel it reads from, where it sends events and where replies
+go. These pages have no edit or delete buttons. Knative would undo any change, and deleting one by
+hand can break the Broker or Trigger that owns it.
+
+![Details of a Subscription that Knative created for the Trigger catch-all, showing the InMemoryChannel it reads from, the Broker filter address it sends to, and the Broker it replies to](./trigger-subscription.png)
