@@ -7,6 +7,8 @@ authors: ["athang-kali"]
 draft: true
 ---
 
+import demoVideo from "./demo-video.mp4";
+
 [Kyverno](https://kyverno.io/) is a CNCF graduated, Kubernetes-native policy engine that validates, mutates, and generates Kubernetes resources, used across thousands of clusters.
 
 [Headlamp](https://headlamp.dev/) is an extensible Kubernetes web UI. With its plugin system, Headlamp can surface APIs and workflows beyond the built-in Kubernetes resources. The Kyverno plugin already gave you compliance metrics, policy list views, and reports, but it stayed entirely read-only. You could see that a policy failed, you couldn't easily see which resources it actually touched, why it matched them, or what to change.
@@ -14,6 +16,12 @@ draft: true
 These updates, available from the plugin's `main` branch, close that gap. The plugin now surfaces reported resources and policy match criteria, provides guidance for supported violations, covers Kyverno's newer CEL-based policy types, and reports on the health of the policy engine itself.
 
 <!-- truncate -->
+
+<p>
+  <video controls width="100%" aria-label="Kyverno plugin for Headlamp walkthrough">
+    <source src={demoVideo} type="video/mp4" />
+  </video>
+</p>
 
 ## See every resource a policy affects, grouped by kind with the reason it matched
 
