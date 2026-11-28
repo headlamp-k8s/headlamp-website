@@ -6,7 +6,7 @@ image: ./overview.png
 authors: ['pragati-verma']
 ---
 
-Velero copies a Kubernetes cluster into a bucket and can restore that copy back into the cluster. A backup takes Deployments, Pods, ConfigMaps, and disks. The bucket is a Backup Storage Location.
+Velero backs up selected Kubernetes objects and can restore that copy into a cluster. Object manifests, such as Deployments, Pods, and ConfigMaps, are stored in a bucket called a Backup Storage Location. Files from a pod volume can be copied into that same bucket. A CSI disk snapshot is a separate path: Velero takes it through a Volume Snapshot Location, and it can move that snapshot data into the bucket afterward.
 
 ![Velero stores a backup in a bucket and can restore it to the cluster.](./what-velero-does.png)
 
@@ -15,6 +15,8 @@ Velero stores a backup in a bucket and can restore it to the cluster.
 A backup is the copy you use after a workload or a namespace is gone. A restore brings the objects back. It does not promise that the application stays up the whole time.
 
 Headlamp is an extensible Kubernetes web UI. The Velero plugin shows those Schedules, Backups, Restores, and storage locations in Headlamp, so you can see what is protected and whether the last run succeeded without leaving the UI.
+
+<!-- truncate -->
 
 ## Why do we need Velero
 
@@ -112,12 +114,15 @@ The plugin is not trying to replace `kubectl` or the Velero CLI. Those remain th
 
 ## Try it and share feedback
 
-To try the plugin:
+The screenshots of Create, Overview, and the Map are from the plugin after 0.1.0-alpha. That later work is not what the Headlamp plugin catalog installs today. The catalog release is still 0.1.0-alpha, and it is read-only: coverage on a workload, Schedules, Backups, Restores, and storage locations.
 
-1. Install Headlamp.
-2. Open the Plugin Catalog from the Headlamp UI.
+These install steps are for Headlamp Desktop:
+
+1. Install Headlamp Desktop.
+2. Open the Plugin Catalog from the Headlamp Desktop UI.
 3. Search for Velero.
 4. Install the Velero plugin.
 5. Connect Headlamp to a Kubernetes cluster where Velero is already installed.
+6. If Velero is not in a namespace named `velero`, open **Settings → Plugins → Velero** and set that namespace. The plugin reads Schedules, Backups, and Restores from the namespace you set there.
 
 If you have ideas, feature requests, or bug reports, open an issue in the Headlamp plugins repository. Feedback from people who run Velero will help shape what comes next.
